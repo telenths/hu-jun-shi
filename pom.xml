@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.hu.junshi</groupId>
     <artifactId>junshi</artifactId>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
     <version>1.0</version>
     <name>Junshi</name>
     <url>http://maven.apache.org</url>
