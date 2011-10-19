@@ -13,6 +13,35 @@ function initMenu() {
     });
 }
 
+function initMenuSolution(){
+    $.getJSON('/junshi/json/menu_solutions.json', function(data) {
+        var html = "";
+        $.each(data, function(entryIndex, entry) {
+            if (entry['menu']) {
+                html += "<a style='width:100%' href='" + entry['link'] + "'><div class='"+entry['class']+"'>" + entry['menu'] + "</div></a>";
+            }
+            
+            if(entry['data']){
+            	$.each(entry['data'], function(entryIndex, entry){
+            		html += "<a style='width:100%' href='" + entry['link'] + "'><div class='"+entry['class']+"'>" + entry['item'] + "</div></a>";
+            	});
+            }
+            
+        });
+        $('#menu_solution').prepend(html);
+    });
+}
+
+function initFooter(){
+	var html = "君实科技（上海）  电话：13764193800（蔡亮）";
+	$('#footer_text').prepend(html);
+}
+
 $(document).ready(function() {
     initMenu();
+    if($("#menu_solution")){
+    	initMenuSolution();
+    }
+    initFooter();
+    
 });

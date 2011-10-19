@@ -34,6 +34,7 @@ center>table {
 }
 
 #menu td {
+	height: 40px;
     margin: 0;
     padding: 5px 10px;
     white-space: nowrap;
@@ -60,3 +61,40 @@ center>table {
     color: #FFF;
     text-shadow:#000 1px 1px 0;
 }
+#menu_solution {
+	width: 290px;
+}
+
+.menu_solu, .menu_solu_item {
+	height: 50px;
+	font-weight: bold;
+	border-right: 1px solid #000;
+	line-height:50px;
+	color: #036;
+}
+
+.menu_solu {
+	font-size: 18px;
+	text-indent: 2px;
+	
+}
+
+.menu_solu_item {
+	font-size: 15px;
+	text-indent: 1em;
+}
+.menu_solu_item:hover, .menu_solu:hover {
+	background-color: #777;
+	color: #FFF;
+    text-shadow:#000 1px 1px 0;
+}
+.menu_solu_item:hover {
+	font-size: 16px;
+}
+
+
+
+
+
+
+
