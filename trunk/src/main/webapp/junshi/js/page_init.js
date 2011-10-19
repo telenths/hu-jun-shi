@@ -23,7 +23,10 @@ function initMenuSolution(){
             
             if(entry['data']){
             	$.each(entry['data'], function(entryIndex, entry){
-            		html += "<a style='width:100%' href='" + entry['link'] + "'><div class='"+entry['class']+"'>" + entry['item'] + "</div></a>";
+                  if (window.location.pathname == entry['link'])
+                	  html += "<div class='"+entry['class']+"_current'>" + entry['item'] + "</div>";
+                  else
+                	  html += "<a style='width:100%' href='" + entry['link'] + "'><div class='"+entry['class']+"'>" + entry['item'] + "</div></a>";
             	});
             }
             

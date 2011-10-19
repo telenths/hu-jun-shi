@@ -17,23 +17,4 @@
 		</ftp>
 	</target>
 
-	<target name="reGeneratePage">
-		<echo message="---"/>
-		<replaceregexp byline="false" flags="m" encoding="UTF-8">
-	      <regexp pattern="&lt;!--Head_Import_Start[.\s\S]*?Head_Import_END--&gt;"/>
-		  <substitution expression="
-			&lt;!--Head_Import_Start--&gt;
-			&lt;script type='text/javascript' src='js/googletrack.js'&gt;&lt;/script&gt;\n
-		    &lt;script type='text/javascript' src='js/jquery-1.6.4.min.js'&gt;&lt;/script&gt;\n
-		    &lt;script type='text/javascript' src='js/menu_nav.js'&gt;&lt;/script&gt;\n
-		    &lt;link type='text/css' rel='stylesheet' href='css/main.css' /&gt;
-		  	&lt;!--Head_Import_END--&gt;
-"/>
-		  <fileset dir="./src/main/webapp/junshi/html/">
-		    <include name="*.html"/>
-		  </fileset>
-		</replaceregexp>
-	</target>
-	
-	
 </project>
