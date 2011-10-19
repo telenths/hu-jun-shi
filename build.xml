@@ -1,0 +1,20 @@
+<project name="Zoe" basedir=".">
+
+	<target name="copy-resources">
+		<!--delete dir="./site/"/-->
+		<copy todir="./site/" verbose="true">
+			<fileset dir="./src/main/webapp/">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+	</target>
+	<target name="upload_site">
+		<ftp server="ftp.host.sk" remotedir="/" userid="telenths" password="hushang" verbose="yes" passive="yes" depends="yes">
+			<fileset dir="./site/">
+				<include name="**/*" />
+				<exclude name="**/Thumbs.db" />
+			</fileset>
+		</ftp>
+	</target>
+
+</project>

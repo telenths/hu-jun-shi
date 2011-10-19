@@ -1,0 +1,14 @@
+[
+  { "menu":"首页",
+    "link":"/junshi/index.html"
+  } ,
+  { "menu":"解决方案",
+    "link":""
+  },
+  { "menu":"资料下载",
+    "link":""
+  },
+  { "menu":"联系我们",
+    "link":"/junshi/html/contact.html"
+  }
+] 
