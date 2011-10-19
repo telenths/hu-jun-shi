@@ -65,7 +65,7 @@ center>table {
 	width: 290px;
 }
 
-.menu_solu, .menu_solu_item {
+.menu_solu, .menu_solu_item, .menu_solu_item_current {
 	height: 50px;
 	font-weight: bold;
 	border-right: 1px solid #000;
@@ -79,7 +79,7 @@ center>table {
 	
 }
 
-.menu_solu_item {
+.menu_solu_item, .menu_solu_item_current {
 	font-size: 15px;
 	text-indent: 1em;
 }
@@ -90,6 +90,11 @@ center>table {
 }
 .menu_solu_item:hover {
 	font-size: 16px;
+}
+.menu_solu_item_current {
+	background-color: #779;
+	color: #FFF;
+    text-shadow:#000 1px 1px 0;
 }
 
 
