@@ -1,0 +1,18 @@
+[
+  { "menu":"解决方案",
+    "class":"menu_solu",
+    "data":
+           [ 
+             { 
+               "item":"智能变配电监控系统", 
+               "class":"menu_solu_item",
+               "link":"/junshi/html/solutions/solution_01.html"
+             },
+             { 
+               "item":"智能变配电监控系统", 
+               "class":"menu_solu_item",
+               "link":"/junshi/html/solutions/solution_02.html"
+             }
+           ]
+  }
+] 
