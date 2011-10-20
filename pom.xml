@@ -66,6 +66,20 @@
                 <version>1.6</version>
                 <executions>
                     <execution>
+                        <id>clean-site-resources</id>
+                        <phase>pre-clean</phase>
+                        <configuration>
+                            <tasks>
+                                <ant antfile="./build.xml">
+                                    <target name="clean-ersources" />
+                                </ant>
+                            </tasks>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                    <execution>
                         <id>copy-site-resources</id>
                         <phase>process-resources</phase>
                         <configuration>

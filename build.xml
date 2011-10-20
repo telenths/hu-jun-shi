@@ -1,5 +1,9 @@
-<project name="Zoe" basedir=".">
+<project name="JunShi_Build" basedir=".">
 
+    <target name="clean-ersources">
+        <delete dir="./site/"/>
+    </target>
+	
 	<target name="copy-resources">
 		<!--delete dir="./site/"/-->
 		<copy todir="./site/" verbose="true">
