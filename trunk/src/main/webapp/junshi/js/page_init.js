@@ -36,7 +36,7 @@ function initMenuSolution(){
 }
 
 function initFooter(){
-	var html = "君实科技（上海）  电话：13764193800（蔡亮）";
+	var html = "君实科技（上海）©2011  <br> 联系人：蔡亮 | 电话：13764193800";
 	$('#footer_text').prepend(html);
 }
 
@@ -46,5 +46,10 @@ $(document).ready(function() {
     	initMenuSolution();
     }
     initFooter();
+    
+
+	$('#table_contact tr>td:even').addClass('center_align_left');
+	$('#table_contact tr>td:odd').addClass('center_align_right');
+    
     
 });

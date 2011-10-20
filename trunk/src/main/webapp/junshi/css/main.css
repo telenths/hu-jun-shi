@@ -2,18 +2,32 @@
 
 body {
     margin:0px;
-    font:normal 13px "宋体", Arial, Helvetica, sans-serif;
+    font-family: 'Microsoft YaHei', Verdana, 'BitStream vera Sans', Tahoma, Helvetica, sans-serif;
+    font-size: 12px ;
     color:#333 !important;
-    background-color:#fff;
+    background-color:#EEE;
 }
 
 a:visited { color:#000;text-decoration:none;}
 a:link    { color:#000;text-decoration:none;}
 a:active  { color:#000;text-decoration:none;}
+a:hover   { color:#000;text-decoration:underline;}
 
 center>table {
 	width:970px;
 	border:0px;
+    background-color:#FFF;
+}
+
+.center_align_left{
+    text-align:right;
+    font-weight:bold;
+    padding-right:5px;
+}
+.center_align_right{
+    text-align:left;
+    padding-left:5px;
+    min-width:50px;
 }
 
 #title_banner {
@@ -25,12 +39,20 @@ center>table {
     background-color: #FFF;
 }
 
+#table_body {
+	padding: 1em;
+}
+
 #footer {
     height:60px;
     background-image:url('../images/gradientbottom.jpg');
     text-align: center;
     font-size: 12px;
-    
+}
+
+#menu_solution, #menu_contact {
+    width: 250px;
+    border-right: 1px solid #000;
 }
 
 #menu td {
@@ -57,48 +79,44 @@ center>table {
     text-shadow:#FFF 1px 1px 0;
 }
 .menu_nav_item:hover, .menu_nav_item:hover  a{
-    background: #88C;
-    color: #FFF;
-    text-shadow:#000 1px 1px 0;
-}
-#menu_solution {
-	width: 290px;
+    background: #EEE;
+/*     color: #FFF; */
+/*     text-shadow:#000 1px 1px 0; */
 }
 
 .menu_solu, .menu_solu_item, .menu_solu_item_current {
-	height: 50px;
-	font-weight: bold;
-	border-right: 1px solid #000;
-	line-height:50px;
+	height: 30px;
+    line-height:30px;
 	color: #036;
+/*     text-shadow:#EEE 1px 1px 0; */
+    border-bottom: 1px dotted darkGray;
 }
 
 .menu_solu {
-	font-size: 18px;
-	text-indent: 2px;
-	
+	font-size: 15px;
+    font-weight: bold;
 }
 
 .menu_solu_item, .menu_solu_item_current {
-	font-size: 15px;
-	text-indent: 1em;
+	font-size: 12px;
+    text-indent: 2em;
+    background: url(/junshi/images/contact_icon.jpg) no-repeat 10px 11px;
 }
-.menu_solu_item:hover, .menu_solu:hover {
-	background-color: #777;
-	color: #FFF;
-    text-shadow:#000 1px 1px 0;
-}
-.menu_solu_item:hover {
-	font-size: 16px;
+.menu_solu_item:hover, .menu_solu:hover, .menu_solu_item_current:hover {
+	background-color: #EEE;
+    text-shadow:#FFF 1px 1px 0;
 }
 .menu_solu_item_current {
-	background-color: #779;
-	color: #FFF;
-    text-shadow:#000 1px 1px 0;
+	color: #D33;
 }
 
-
-
+#table_contact {
+	font-size: 15px;
+	margin-top: 5em;
+    margin-left: 5em;
+	height: 150px;
+/* 	border: 1px solid #000; */
+}
 
 
 
