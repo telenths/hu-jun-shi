@@ -11,12 +11,43 @@ public class PageGen {
     private final String lineBreak = System.getProperty("line.separator");
 
     private final String headReplacement = "<!--Head_Import_Start-->" + lineBreak
-                           + " <script type='text/javascript' src='/junshi/js/googletrack.js'></script>      " + lineBreak
-                           + " <script type='text/javascript' src='/junshi/js/jquery-1.6.4.min.js'></script> " + lineBreak
-                           + " <script type='text/javascript' src='/junshi/js/page_init.js'></script>         " + lineBreak
-                           + " <link type='text/css' rel='stylesheet' href='/junshi/css/main.css' />         " + lineBreak
+                           + " <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>           ".trim() + lineBreak
+                           + " <title>君实科技（上海）</title>                                                ".trim() + lineBreak
+                           + " <script type='text/javascript' src='/junshi/js/googletrack.js'></script>      ".trim() + lineBreak
+                           + " <script type='text/javascript' src='/junshi/js/jquery-1.6.4.min.js'></script> ".trim() + lineBreak
+                           + " <script type='text/javascript' src='/junshi/js/page_init.js'></script>        ".trim() + lineBreak
+                           + " <link type='text/css' rel='stylesheet' href='/junshi/css/main.css' />         ".trim() + lineBreak
                            + "<!--Head_Import_End-->";
 
+    private final String pageHeaderReplacement = "<!--Page_Header_Start-->" + lineBreak
+//                        + " <table border='0' cellspacing='0' cellpadding='0'>                                                        ".trim() + lineBreak
+//                        + "   <tr>                                                                                                    ".trim() + lineBreak
+//                        + "     <td><div id='title_banner'>&nbsp;</div></td>                                                          ".trim() + lineBreak
+//                        + "   </tr>                                                                                                   ".trim() + lineBreak
+//                        + " </table>                                                                                                  ".trim() + lineBreak
+                        + " <table border='0' cellspacing='0' cellpadding='0'>                                                        ".trim() + lineBreak
+                        + "   <tr>                                                                                                    ".trim() + lineBreak
+                        + "     <td>                                                                                                  ".trim() + lineBreak
+                        + "       <object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000'                                        ".trim() + lineBreak
+                        + "           codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0' ".trim() + lineBreak
+                        + "           width='969' height='200'>                                                                       ".trim() + lineBreak
+                        + "         <param name='movie' value='/junshi/images/bcastr3.swf'>                                           ".trim() + lineBreak
+                        + "         <param name='quality' value='high'>                                                               ".trim() + lineBreak
+                        + "         <param name='wmode' value='transparent'>                                                          ".trim() + lineBreak
+                        + "         <param name='FlashVars' value='bcastr_xml_url=/junshi/images/bcastr.xml'>                         ".trim() + lineBreak
+                        + "         <embed src='/junshi/images/bcastr3.swf'                                                           ".trim() + lineBreak
+                        + "          FlashVars='bcastr_xml_url=/junshi/images/bcastr.xml' quality='high'                              ".trim() + lineBreak
+                        + "        pluginspage='http://www.macromedia.com/go/getflashplayer' type='application/x-shockwave-flash'     ".trim() + lineBreak
+                        + "              width='969' height='200'></embed>                                                            ".trim() + lineBreak
+                        + "       </object>                                                                                           ".trim() + lineBreak
+                        + "     </td>                                                                                                 ".trim() + lineBreak
+                        + "   </tr>                                                                                                   ".trim() + lineBreak
+                        + " </table>                                                                                                  ".trim() + lineBreak
+                        + " <table border='0' cellspacing='0' cellpadding='0' id='menu'>                                              ".trim() + lineBreak
+                        + "   <tr id='menu_nav'>                                                                                      ".trim() + lineBreak
+                        + "   </tr>                                                                                                   ".trim() + lineBreak
+                        + " </table>                                                                                                  ".trim() + lineBreak
+                        + "<!--Page_Header_End-->";
 
     public static void main(String[] args) throws IOException {
 
@@ -58,14 +89,13 @@ public class PageGen {
             return;
 
         String str = FileUtil.readFile(file);
-        str = replaceHead(str);
+        str = replace(str, "Head_Import", headReplacement);
+        str = replace(str, "Page_Header", pageHeaderReplacement);
         FileUtil.writeFile(file, str);
     }
 
-    public String replaceHead(String str){
-        return str.replaceAll("<!--Head_Import_Start-->[.\\s\\S]*<!--Head_Import_End-->", headReplacement);
+    public String replace(String str, String mark, String replacement){
+        return str.replaceAll("<!--"+mark+"_Start-->[.\\s\\S]*<!--"+mark+"_End-->", replacement);
     }
-
-
 
 }
