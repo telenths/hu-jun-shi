@@ -12,6 +12,16 @@
 			</fileset>
 		</copy>
 	</target>
+
+    <target name="upload_junshi">
+        <ftp server="www.junshitech.net" remotedir="/" userid="junshitech" password="Hushang12!@" verbose="yes" passive="yes" depends="yes">
+            <fileset dir="./site/">
+                <include name="**/*" />
+                <exclude name="**/Thumbs.db" />
+            </fileset>
+        </ftp>
+    </target>
+	
 	<target name="upload_site">
 		<ftp server="ftp.host.sk" remotedir="/" userid="telenths" password="hushang" verbose="yes" passive="yes" depends="yes">
 			<fileset dir="./site/">

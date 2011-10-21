@@ -99,7 +99,7 @@
                         <configuration>
                             <tasks>
                                 <ant antfile="./build.xml">
-                                    <target name="upload_site" />
+                                    <target name="upload_junshi" />
                                 </ant>
                             </tasks>
                         </configuration>
