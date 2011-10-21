@@ -6,17 +6,18 @@ import java.io.IOException;
 
 import com.junshi.util.FileUtil;
 
+
 public class PageGen {
 
     private final String lineBreak = System.getProperty("line.separator");
 
     private final String headReplacement = "<!--Head_Import_Start-->" + lineBreak
                            + " <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>           ".trim() + lineBreak
-                           + " <title>君实科技（上海）</title>                                                ".trim() + lineBreak
-                           + " <script type='text/javascript' src='/junshi/js/googletrack.js'></script>      ".trim() + lineBreak
-                           + " <script type='text/javascript' src='/junshi/js/jquery-1.6.4.min.js'></script> ".trim() + lineBreak
-                           + " <script type='text/javascript' src='/junshi/js/page_init.js'></script>        ".trim() + lineBreak
-                           + " <link type='text/css' rel='stylesheet' href='/junshi/css/main.css' />         ".trim() + lineBreak
+                           + " <title>胡君实（上海）</title>                                                  ".trim() + lineBreak
+                           + " <script type='text/javascript' src='/js/googletrack.js'></script>             ".trim() + lineBreak
+                           + " <script type='text/javascript' src='/js/jquery-1.6.4.min.js'></script>        ".trim() + lineBreak
+                           + " <script type='text/javascript' src='/js/page_init.js'></script>               ".trim() + lineBreak
+                           + " <link type='text/css' rel='stylesheet' href='/css/main.css' />                ".trim() + lineBreak
                            + "<!--Head_Import_End-->";
 
     private final String pageHeaderReplacement = "<!--Page_Header_Start-->" + lineBreak
@@ -31,12 +32,12 @@ public class PageGen {
                         + "       <object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000'                                        ".trim() + lineBreak
                         + "           codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0' ".trim() + lineBreak
                         + "           width='969' height='200'>                                                                       ".trim() + lineBreak
-                        + "         <param name='movie' value='/junshi/images/bcastr3.swf'>                                           ".trim() + lineBreak
+                        + "         <param name='movie' value='/images/bcastr3.swf'>                                                  ".trim() + lineBreak
                         + "         <param name='quality' value='high'>                                                               ".trim() + lineBreak
                         + "         <param name='wmode' value='transparent'>                                                          ".trim() + lineBreak
-                        + "         <param name='FlashVars' value='bcastr_xml_url=/junshi/images/bcastr.xml'>                         ".trim() + lineBreak
-                        + "         <embed src='/junshi/images/bcastr3.swf'                                                           ".trim() + lineBreak
-                        + "          FlashVars='bcastr_xml_url=/junshi/images/bcastr.xml' quality='high'                              ".trim() + lineBreak
+                        + "         <param name='FlashVars' value='bcastr_xml_url=/images/bcastr.xml'>                                ".trim() + lineBreak
+                        + "         <embed src='/images/bcastr3.swf'                                                                  ".trim() + lineBreak
+                        + "          FlashVars='bcastr_xml_url=/images/bcastr.xml' quality='high'                                     ".trim() + lineBreak
                         + "        pluginspage='http://www.macromedia.com/go/getflashplayer' type='application/x-shockwave-flash'     ".trim() + lineBreak
                         + "              width='969' height='200'></embed>                                                            ".trim() + lineBreak
                         + "       </object>                                                                                           ".trim() + lineBreak
@@ -57,7 +58,7 @@ public class PageGen {
     }
 
     public void operate() throws IOException{
-        File root = new File("./src/main/webapp/junshi/html/");
+        File root = new File("./src/main/webapp/html/");
         operateFolder(root);
     }
 

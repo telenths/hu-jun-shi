@@ -1,5 +1,5 @@
 function initMenu() {
-    $.getJSON('/junshi/json/menu_nav.json', function(data) {
+    $.getJSON('/json/menu_nav.json', function(data) {
         var html = "";
         $.each(data, function(entryIndex, entry) {
             if (entry['menu']) {
@@ -14,7 +14,7 @@ function initMenu() {
 }
 
 function initMenuSolution(){
-    $.getJSON('/junshi/json/menu_solutions.json', function(data) {
+    $.getJSON('/json/menu_solutions.json', function(data) {
         var html = "";
         $.each(data, function(entryIndex, entry) {
             if (entry['menu']) {
@@ -36,7 +36,7 @@ function initMenuSolution(){
 }
 
 function initFooter(){
-	var html = "君实科技（上海）©2011  <br> 联系人：蔡亮 | 电话：13764193800";
+	var html = "胡君实（上海）©2011  <br> 联系人：蔡亮 | 电话：13764193800";
 	$('#footer_text').prepend(html);
 }
 

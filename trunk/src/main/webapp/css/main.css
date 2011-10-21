@@ -32,7 +32,7 @@ center>table {
 
 #title_banner {
 	height:60px;
-	background-image:url('../images/logo.234.60.gif');
+	background-image:url('/images/logo.234.60.gif');
 	background-repeat:no-repeat;
 	background-position:left center;
 /*     background-color: #202020; */
@@ -45,7 +45,7 @@ center>table {
 
 #footer {
     height:60px;
-    background-image:url('../images/gradientbottom.jpg');
+    background-image:url('/images/gradientbottom.jpg');
     text-align: center;
     font-size: 12px;
 }
@@ -58,11 +58,13 @@ center>table {
 #menu td {
 	height: 40px;
     margin: 0;
-    padding: 5px 10px;
+/*     padding: 5px 10px; */
     white-space: nowrap;
     text-align: center;
     font-weight:bold;
     font-size:15px;
+    color: #2875DE;
+    text-shadow:#FFF 1px 1px 0;
 }
 .current_menu_nav_item {
     background: #88C;
@@ -73,11 +75,15 @@ center>table {
 .menu_nav_item {
 /*     background: #EAEBD8; */
     background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkCAIAAADITs03AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADxJREFUeF7litsRACAMwrD77+Q0rtGoV98r+MEFchhgkr4NnZyb3bk/LM/yMCjiH4wots/++hYR3iXLJVWUBS1AtOi2fwAAAABJRU5ErkJggg==);
+/*     background-image:url('/images/tab-break.png'); */
     background-repeat: repeat-x;
     background-position: bottom left;
-    color: #2875DE;
-    text-shadow:#FFF 1px 1px 0;
 }
+.menu_nav_item>a>div {
+    height: 40px;
+    line-height: 40px;
+}
+
 .menu_nav_item:hover, .menu_nav_item:hover  a{
     background: #EEE;
 /*     color: #FFF; */
@@ -100,7 +106,7 @@ center>table {
 .menu_solu_item, .menu_solu_item_current {
 	font-size: 12px;
     text-indent: 2em;
-    background: url(/junshi/images/contact_icon.jpg) no-repeat 10px 11px;
+    background: url(/images/contact_icon.jpg) no-repeat 10px 11px;
 }
 .menu_solu_item:hover, .menu_solu:hover, .menu_solu_item_current:hover {
 	background-color: #EEE;
