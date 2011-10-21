@@ -1,0 +1,10 @@
+cp solution_00.html solution_01.html
+cp solution_00.html solution_02.html
+cp solution_00.html solution_03.html
+cp solution_00.html solution_04.html
+cp solution_00.html solution_05.html
+cp solution_00.html solution_06.html
+cp solution_00.html solution_07.html
+cp solution_00.html solution_08.html
+cp solution_00.html solution_09.html
+cp solution_00.html solution_10.html
