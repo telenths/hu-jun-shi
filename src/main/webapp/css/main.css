@@ -19,6 +19,10 @@ center>table {
     background-color:#FFF;
 }
 
+p {
+	text-indent: 2em;
+}
+
 .center_align_left{
     text-align:right;
     font-weight:bold;
@@ -50,9 +54,9 @@ center>table {
     font-size: 12px;
 }
 
-#menu_solution, #menu_contact {
+.left_menu {
     width: 250px;
-    border-right: 1px solid #000;
+    border-right: 1px dotted #000;
 }
 
 #menu td {
@@ -123,6 +127,23 @@ center>table {
 	height: 150px;
 /* 	border: 1px solid #000; */
 }
+
+.section_title {
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-left:1em;
+    vertical-align: top;
+}
+
+.section_content {
+    font-size: 13px;
+    padding-left: 1em;
+    padding-right: 4em;
+    vertical-align: top;
+    border-bottom: 1px dotted #000;
+}
+
 
 
 
