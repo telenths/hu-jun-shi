@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+body {
+    margin:0px;
+    font-family: 'Microsoft YaHei', Verdana, 'BitStream vera Sans', Tahoma, Helvetica, sans-serif;
+    font-size: 12px ;
+    color:#333 !important;
+    background-color:#EEE;
+}
+
+a:visited { color:#000;text-decoration:none;}
+a:link    { color:#000;text-decoration:none;}
+a:active  { color:#000;text-decoration:none;}
+a:hover   { color:#000;text-decoration:underline;}
+
+center>table {
+	width:970px;
+	border:0px;
+    background-color:#FFF;
+}
+
+.center_align_left{
+    text-align:right;
+    font-weight:bold;
+    padding-right:5px;
+}
+.center_align_right{
+    text-align:left;
+    padding-left:5px;
+    min-width:50px;
+}
+
+#title_banner {
+	height:60px;
+	background-image:url('../images/logo.234.60.gif');
+	background-repeat:no-repeat;
+	background-position:left center;
+/*     background-color: #202020; */
+    background-color: #FFF;
+}
+
+#table_body {
+	padding: 1em;
+}
+
+#footer {
+    height:60px;
+    background-image:url('../images/gradientbottom.jpg');
+    text-align: center;
+    font-size: 12px;
+}
+
+#menu_solution, #menu_contact {
+    width: 250px;
+    border-right: 1px solid #000;
+}
+
+#menu td {
+	height: 40px;
+    margin: 0;
+    padding: 5px 10px;
+    white-space: nowrap;
+    text-align: center;
+    font-weight:bold;
+    font-size:15px;
+}
+.current_menu_nav_item {
+    background: #88C;
+    color: #FFF;
+    text-shadow:#000 1px 1px 0;
+}
+
+.menu_nav_item {
+/*     background: #EAEBD8; */
+    background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkCAIAAADITs03AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADxJREFUeF7litsRACAMwrD77+Q0rtGoV98r+MEFchhgkr4NnZyb3bk/LM/yMCjiH4wots/++hYR3iXLJVWUBS1AtOi2fwAAAABJRU5ErkJggg==);
+    background-repeat: repeat-x;
+    background-position: bottom left;
+    color: #2875DE;
+    text-shadow:#FFF 1px 1px 0;
+}
+.menu_nav_item:hover, .menu_nav_item:hover  a{
+    background: #EEE;
+/*     color: #FFF; */
+/*     text-shadow:#000 1px 1px 0; */
+}
+
+.menu_solu, .menu_solu_item, .menu_solu_item_current {
+	height: 30px;
+    line-height:30px;
+	color: #036;
+/*     text-shadow:#EEE 1px 1px 0; */
+    border-bottom: 1px dotted darkGray;
+}
+
+.menu_solu {
+	font-size: 15px;
+    font-weight: bold;
+}
+
+.menu_solu_item, .menu_solu_item_current {
+	font-size: 12px;
+    text-indent: 2em;
+    background: url(/junshi/images/contact_icon.jpg) no-repeat 10px 11px;
+}
+.menu_solu_item:hover, .menu_solu:hover, .menu_solu_item_current:hover {
+	background-color: #EEE;
+    text-shadow:#FFF 1px 1px 0;
+}
+.menu_solu_item_current {
+	color: #D33;
+}
+
+#table_contact {
+	font-size: 15px;
+	margin-top: 5em;
+    margin-left: 5em;
+	height: 150px;
+/* 	border: 1px solid #000; */
+}
+
+
+
+
