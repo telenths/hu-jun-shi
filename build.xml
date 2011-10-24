@@ -4,6 +4,14 @@
         <delete dir="./site/"/>
     </target>
 	
+	
+    <target name="replace-datetime">
+        <tstamp>
+             <format property="datetime.for.replace" pattern="yyyy.MM.dd.hh.mm.aa" />
+        </tstamp>
+    	<replace file="site\js\page_init.js" token="$[DATETIME]" value="${datetime.for.replace}"/>
+    </target>
+	
 	<target name="copy-resources">
 		<!--delete dir="./site/"/-->
 		<copy todir="./site/" verbose="true">
@@ -13,7 +21,12 @@
 		</copy>
 	</target>
 
-    <target name="upload_junshi">
+    <target name="prepare-site">
+        <antcall target="copy-resources" />
+        <antcall target="replace-datetime" />
+    </target>
+	
+    <target name="upload_junshi" depends="prepare-site">
         <ftp server="www.junshitech.net" remotedir="/" userid="junshitech" password="Hushang12!@" verbose="yes" passive="yes" depends="yes">
             <fileset dir="./site/">
                 <include name="**/*" />
@@ -22,7 +35,7 @@
         </ftp>
     </target>
 	
-	<target name="upload_site">
+	<target name="upload_site" depends="prepare-site">
 		<ftp server="ftp.host.sk" remotedir="/" userid="telenths" password="hushang" verbose="yes" passive="yes" depends="yes">
 			<fileset dir="./site/">
 				<include name="**/*" />

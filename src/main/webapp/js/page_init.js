@@ -1,5 +1,5 @@
 function initMenu() {
-    $.getJSON('/json/menu_nav.json', function(data) {
+    $.getJSON('/json/menu_nav.json?t=$[DATETIME]', function(data) {
         var html = "";
         $.each(data, function(entryIndex, entry) {
             if (entry['menu']) {
@@ -14,7 +14,7 @@ function initMenu() {
 }
 
 function initMenuSolution(){
-    $.getJSON('/json/menu_solutions.json', function(data) {
+    $.getJSON('/json/menu_solutions.json?t=$[DATETIME]', function(data) {
         var html = "";
         $.each(data, function(entryIndex, entry) {
             if (entry['menu']) {
