@@ -12,12 +12,12 @@ public class PageGen {
     private final String lineBreak = System.getProperty("line.separator");
 
     private final String headReplacement = "<!--Head_Import_Start-->" + lineBreak
-                           + " <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>           ".trim() + lineBreak
-                           + " <title>胡君实（上海）</title>                                                  ".trim() + lineBreak
-                           + " <script type='text/javascript' src='/js/googletrack.js'></script>             ".trim() + lineBreak
-                           + " <script type='text/javascript' src='/js/jquery-1.6.4.min.js'></script>        ".trim() + lineBreak
-                           + " <script type='text/javascript' src='/js/page_init.js'></script>               ".trim() + lineBreak
-                           + " <link type='text/css' rel='stylesheet' href='/css/main.css' />                ".trim() + lineBreak
+                           + " <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>                         ".trim() + lineBreak
+                           + " <title>胡君实（上海）</title>                                                                ".trim() + lineBreak
+                           + " <script type='text/javascript' src='/js/googletrack.js?t=#DATETIME#'></script>             ".trim() + lineBreak
+                           + " <script type='text/javascript' src='/js/jquery-1.6.4.min.js?t=#DATETIME#'></script>        ".trim() + lineBreak
+                           + " <script type='text/javascript' src='/js/page_init.js?t=#DATETIME#'></script>               ".trim() + lineBreak
+                           + " <link type='text/css' rel='stylesheet' href='/css/main.css?t=#DATETIME#' />                ".trim() + lineBreak
                            + "<!--Head_Import_End-->";
 
     private final String pageHeaderReplacement = "<!--Page_Header_Start-->" + lineBreak
@@ -35,9 +35,9 @@ public class PageGen {
                         + "         <param name='movie' value='/images/bcastr3.swf'>                                                  ".trim() + lineBreak
                         + "         <param name='quality' value='high'>                                                               ".trim() + lineBreak
                         + "         <param name='wmode' value='transparent'>                                                          ".trim() + lineBreak
-                        + "         <param name='FlashVars' value='bcastr_xml_url=/images/bcastr.xml'>                                ".trim() + lineBreak
+                        + "         <param name='FlashVars' value='bcastr_xml_url=/images/bcastr.xml?t=#DATETIME#'>                                ".trim() + lineBreak
                         + "         <embed src='/images/bcastr3.swf'                                                                  ".trim() + lineBreak
-                        + "          FlashVars='bcastr_xml_url=/images/bcastr.xml' quality='high'                                     ".trim() + lineBreak
+                        + "          FlashVars='bcastr_xml_url=/images/bcastr.xml?t=#DATETIME#' quality='high'                                     ".trim() + lineBreak
                         + "        pluginspage='http://www.macromedia.com/go/getflashplayer' type='application/x-shockwave-flash'     ".trim() + lineBreak
                         + "              width='969' height='200'></embed>                                                            ".trim() + lineBreak
                         + "       </object>                                                                                           ".trim() + lineBreak
