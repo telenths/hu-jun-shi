@@ -35,21 +35,18 @@ function initMenuSolution(){
     });
 }
 
-function initFooter(){
-	var html = "胡君实（上海）©2011  <br> 联系人：蔡亮 | 电话：13764193800";
-	$('#footer_text').prepend(html);
-}
-
 $(document).ready(function() {
     initMenu();
     if($("#menu_solution")){
     	initMenuSolution();
     }
-    initFooter();
     
 
 	$('#table_contact tr>td:even').addClass('center_align_left');
 	$('#table_contact tr>td:odd').addClass('center_align_right');
-    
+
+	$('.salse_section tr>td:even').addClass('center_align_left');
+	$('.salse_section tr>td:odd').addClass('center_align_right');
+	$('.salse_section tr:first-child>td:even').removeClass('center_align_left');
     
 });
