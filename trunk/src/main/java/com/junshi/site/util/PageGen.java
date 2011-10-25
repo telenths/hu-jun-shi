@@ -58,10 +58,21 @@ public class PageGen {
                           + " </table>                                                                                   ".trim() + lineBreak
                           + " <table border='0' cellspacing='0' cellpadding='0' id='footer'>                             ".trim() + lineBreak
                           + "   <tr>                                                                                     ".trim() + lineBreak
-                          + "     <td id='footer_text'></td>                                                             ".trim() + lineBreak
+                          + "     <td id='footer_text'>胡君实（上海）©2011 <br>上海嘉定马东工业园区育绿路253号</td>         ".trim() + lineBreak
                           + "   </tr>                                                                                    ".trim() + lineBreak
                           + " </table>                                                                                   ".trim() + lineBreak
                           + "<!--Page_Footer_End-->";
+
+    private final String pageSideMenuReplacement = "<!--Page_Side_Menu_Start-->" + lineBreak
+                           + " <div class='menu_nolink'>联系销售</div>                                     ".trim() + lineBreak
+                           + " <table border='0' cellspacing='0' cellpadding='0' class='salse_section'>    ".trim() + lineBreak
+                           + "   <tr><td>蔡亮&nbsp;&nbsp;</td><td></td></tr>                               ".trim() + lineBreak
+                           + "   <tr><td>电话:</td><td>13764193800</td></tr>                               ".trim() + lineBreak
+                           + "   <tr><td>QQ:</td><td>1272489503</td></tr>                                  ".trim() + lineBreak
+                           + "   <tr><td>Email:</td><td></td></tr>                                         ".trim() + lineBreak
+                           + " </table>                                                                    ".trim() + lineBreak
+                           + "<!--Page_Side_Menu_End-->";
+
 
     public static void main(String[] args) throws IOException {
 
@@ -106,6 +117,7 @@ public class PageGen {
         str = replace(str, "Head_Import", headReplacement);
         str = replace(str, "Page_Header", pageHeaderReplacement);
         str = replace(str, "Page_Footer", pageFooterReplacement);
+        str = replace(str, "Page_Side_Menu", pageSideMenuReplacement);
         FileUtil.writeFile(file, str);
     }
 
