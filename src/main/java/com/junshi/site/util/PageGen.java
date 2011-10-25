@@ -21,34 +21,47 @@ public class PageGen {
                            + "<!--Head_Import_End-->";
 
     private final String pageHeaderReplacement = "<!--Page_Header_Start-->" + lineBreak
-//                        + " <table border='0' cellspacing='0' cellpadding='0'>                                                        ".trim() + lineBreak
-//                        + "   <tr>                                                                                                    ".trim() + lineBreak
-//                        + "     <td><div id='title_banner'>&nbsp;</div></td>                                                          ".trim() + lineBreak
-//                        + "   </tr>                                                                                                   ".trim() + lineBreak
-//                        + " </table>                                                                                                  ".trim() + lineBreak
-                        + " <table border='0' cellspacing='0' cellpadding='0'>                                                        ".trim() + lineBreak
-                        + "   <tr>                                                                                                    ".trim() + lineBreak
-                        + "     <td>                                                                                                  ".trim() + lineBreak
-                        + "       <object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000'                                        ".trim() + lineBreak
-                        + "           codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0' ".trim() + lineBreak
-                        + "           width='969' height='200'>                                                                       ".trim() + lineBreak
-                        + "         <param name='movie' value='/images/bcastr3.swf'>                                                  ".trim() + lineBreak
-                        + "         <param name='quality' value='high'>                                                               ".trim() + lineBreak
-                        + "         <param name='wmode' value='transparent'>                                                          ".trim() + lineBreak
-                        + "         <param name='FlashVars' value='bcastr_xml_url=/images/bcastr.xml?t=#DATETIME#'>                                ".trim() + lineBreak
-                        + "         <embed src='/images/bcastr3.swf'                                                                  ".trim() + lineBreak
-                        + "          FlashVars='bcastr_xml_url=/images/bcastr.xml?t=#DATETIME#' quality='high'                                     ".trim() + lineBreak
-                        + "        pluginspage='http://www.macromedia.com/go/getflashplayer' type='application/x-shockwave-flash'     ".trim() + lineBreak
-                        + "              width='969' height='200'></embed>                                                            ".trim() + lineBreak
-                        + "       </object>                                                                                           ".trim() + lineBreak
-                        + "     </td>                                                                                                 ".trim() + lineBreak
-                        + "   </tr>                                                                                                   ".trim() + lineBreak
-                        + " </table>                                                                                                  ".trim() + lineBreak
-                        + " <table border='0' cellspacing='0' cellpadding='0' id='menu'>                                              ".trim() + lineBreak
-                        + "   <tr id='menu_nav'>                                                                                      ".trim() + lineBreak
-                        + "   </tr>                                                                                                   ".trim() + lineBreak
-                        + " </table>                                                                                                  ".trim() + lineBreak
-                        + "<!--Page_Header_End-->";
+                            + " <table border='0' cellspacing='0' cellpadding='0'>                                                        ".trim() + lineBreak
+                            + "   <tr>                                                                                                    ".trim() + lineBreak
+                            + "     <td>                                                                                                  ".trim() + lineBreak
+                            + "       <object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000'                                        ".trim() + lineBreak
+                            + "           codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0' ".trim() + lineBreak
+                            + "           width='969' height='200'>                                                                       ".trim() + lineBreak
+                            + "         <param name='movie' value='/images/bcastr3.swf'>                                                  ".trim() + lineBreak
+                            + "         <param name='quality' value='high'>                                                               ".trim() + lineBreak
+                            + "         <param name='wmode' value='transparent'>                                                          ".trim() + lineBreak
+                            + "         <param name='FlashVars' value='bcastr_xml_url=/images/bcastr.xml?t=#DATETIME#'>                                ".trim() + lineBreak
+                            + "         <embed src='/images/bcastr3.swf'                                                                  ".trim() + lineBreak
+                            + "          FlashVars='bcastr_xml_url=/images/bcastr.xml?t=#DATETIME#' quality='high'                                     ".trim() + lineBreak
+                            + "        pluginspage='http://www.macromedia.com/go/getflashplayer' type='application/x-shockwave-flash'     ".trim() + lineBreak
+                            + "              width='969' height='200'></embed>                                                            ".trim() + lineBreak
+                            + "       </object>                                                                                           ".trim() + lineBreak
+                            + "     </td>                                                                                                 ".trim() + lineBreak
+                            + "   </tr>                                                                                                   ".trim() + lineBreak
+                            + " </table>                                                                                                  ".trim() + lineBreak
+                            + " <table border='0' cellspacing='0' cellpadding='0' id='menu'>                                              ".trim() + lineBreak
+                            + "   <tr id='menu_nav'>                                                                                      ".trim() + lineBreak
+                            + "   </tr>                                                                                                   ".trim() + lineBreak
+                            + " </table>                                                                                                  ".trim() + lineBreak
+                            + "<!--Page_Header_End-->";
+
+    private final String pageFooterReplacement = "<!--Page_Footer_Start-->"            + lineBreak
+                          + " <table border='0' cellspacing='0' cellpadding='0' id='footer_links'>                       ".trim() + lineBreak
+                          + "   <tr>                                                                                     ".trim() + lineBreak
+                          + "     <td>                                                                                   ".trim() + lineBreak
+                          + "       <a target='_blank' href='www.acrel.cn'><img src='/images/logos/logo_acrel.jpg'></a>                  ".trim() + lineBreak
+                          + "       <a target='_blank' href='www.abb.com.cn'><img src='/images/logos/logo_abb.gif'></a>                  ".trim() + lineBreak
+                          + "       <a target='_blank' href='www.schneider-electric.com'><img src='/images/logos/logo_schneider.gif'></a>".trim() + lineBreak
+                          + "       <a target='_blank' href='www.bjx.com.cn'><img src='/images/logos/logo_bjx.gif'></a>                  ".trim() + lineBreak
+                          + "     </td>                                                                                  ".trim() + lineBreak
+                          + "   </tr>                                                                                    ".trim() + lineBreak
+                          + " </table>                                                                                   ".trim() + lineBreak
+                          + " <table border='0' cellspacing='0' cellpadding='0' id='footer'>                             ".trim() + lineBreak
+                          + "   <tr>                                                                                     ".trim() + lineBreak
+                          + "     <td id='footer_text'></td>                                                             ".trim() + lineBreak
+                          + "   </tr>                                                                                    ".trim() + lineBreak
+                          + " </table>                                                                                   ".trim() + lineBreak
+                          + "<!--Page_Footer_End-->";
 
     public static void main(String[] args) throws IOException {
 
@@ -92,6 +105,7 @@ public class PageGen {
         String str = FileUtil.readFile(file);
         str = replace(str, "Head_Import", headReplacement);
         str = replace(str, "Page_Header", pageHeaderReplacement);
+        str = replace(str, "Page_Footer", pageFooterReplacement);
         FileUtil.writeFile(file, str);
     }
 
