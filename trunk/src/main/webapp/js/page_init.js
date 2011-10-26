@@ -36,7 +36,7 @@ function initMenuSolution(){
 }
 
 $(document).ready(function() {
-    initMenu();
+//    initMenu();
     if($("#menu_solution")){
     	initMenuSolution();
     }

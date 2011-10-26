@@ -39,10 +39,16 @@ public class PageGen {
                             + "     </td>                                                                                                 ".trim() + lineBreak
                             + "   </tr>                                                                                                   ".trim() + lineBreak
                             + " </table>                                                                                                  ".trim() + lineBreak
-                            + " <table border='0' cellspacing='0' cellpadding='0' id='menu'>                                              ".trim() + lineBreak
-                            + "   <tr id='menu_nav'>                                                                                      ".trim() + lineBreak
-                            + "   </tr>                                                                                                   ".trim() + lineBreak
-                            + " </table>                                                                                                  ".trim() + lineBreak
+                            + "  <table border='0' cellspacing='0' cellpadding='0' id='menu'>                                                  ".trim() + lineBreak
+                            + "    <tbody>                                                                                                     ".trim() + lineBreak
+                            + "      <tr id='menu_nav'>                                                                                        ".trim() + lineBreak
+                            + "        <td class='menu_nav_item'><a style='width: 100%' href='/index.html'><div style='width: 100%'>首页</div></a></td>                          ".trim() + lineBreak
+                            + "        <td class='menu_nav_item'><a style='width: 100%' href='/html/solutions/solution_00.html'><div style='width: 100%'>解决方案</div></a></td> ".trim() + lineBreak
+                            + "        <td class='menu_nav_item'><a style='width: 100%' href='/html/download.html'><div style='width: 100%'>资料下载</div></a></td>              ".trim() + lineBreak
+                            + "        <td class='menu_nav_item'><a style='width: 100%' href='/html/contact.html'><div style='width: 100%'>联系我们</div></a></td>               ".trim() + lineBreak
+                            + "      </tr>                                                                                                                                       ".trim() + lineBreak
+                            + "    </tbody>                                                                                                                                      ".trim() + lineBreak
+                            + "  </table>                                                                                                                                        ".trim() + lineBreak
                             + "<!--Page_Header_End-->";
 
     private final String pageFooterReplacement = "<!--Page_Footer_Start-->"            + lineBreak
