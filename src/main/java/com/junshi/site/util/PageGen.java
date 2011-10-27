@@ -12,10 +12,10 @@ public class PageGen {
     private final String lineBreak = System.getProperty("line.separator");
 
     private final String headReplacement = "<!--Head_Import_Start-->" + lineBreak
+                           + " <meta name='keywords' content='电表,智能电网,解决方案,安科瑞,传感器,智能电力监控仪表,智能马达控制器,电量传感器,导轨式安装电表,火灾监控装置,数显继电器,电力监控系统,能耗监测系统' />".trim() + lineBreak
                            + " <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>                         ".trim() + lineBreak
                            + " <title>胡君实（上海）</title>                                                                ".trim() + lineBreak
                            + " <script type='text/javascript' src='/js/googletrack.js?t=#DATETIME#'></script>             ".trim() + lineBreak
-                           + " <script type='text/javascript' src='js/baidutrack.js?t=#DATETIME#'></script>               ".trim() + lineBreak
                            + " <script type='text/javascript' src='/js/jquery-1.6.4.min.js?t=#DATETIME#'></script>        ".trim() + lineBreak
                            + " <script type='text/javascript' src='/js/page_init.js?t=#DATETIME#'></script>               ".trim() + lineBreak
                            + " <link type='text/css' rel='stylesheet' href='/css/main.css?t=#DATETIME#' />                ".trim() + lineBreak
@@ -76,6 +76,9 @@ public class PageGen {
                            + "   <tr><td>QQ:</td><td>1272489503</td></tr>                                  ".trim() + lineBreak
                            + "   <tr><td>Email:</td><td></td></tr>                                         ".trim() + lineBreak
                            + " </table>                                                                    ".trim() + lineBreak
+                           + " <!-- 广告位：JunShiTech -->                                                  ".trim() + lineBreak
+                           + " <script type='text/javascript' >BAIDU_CLB_SLOT_ID = '231221';</script>       ".trim() + lineBreak
+                           + " <script type='text/javascript' src='http://cbjs.baidu.com/js/o.js'></script>   ".trim() + lineBreak
                            + "<!--Page_Side_Menu_End-->";
 
 
@@ -89,6 +92,7 @@ public class PageGen {
     public void operate() throws IOException{
         File root = new File("./src/main/webapp/html/");
         operateFolder(root);
+//        refineFile(new File("./src/main/webapp/index.html"));
     }
 
     public void operateFolder(File file) throws IOException {
