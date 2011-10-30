@@ -73,13 +73,22 @@ p {
     font-size: 12px;
 }
 
+#footer_links {
+	padding-top: 0.5em;
+    border-top: 1px dotted #EEE;
+	border-bottom: 1px dotted #333;
+}
+
 #footer_links td{
     text-align: center;
+    padding-bottom: 0.5em;
 }
 #footer_links img {
     height:40px;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding:2px;
+    border:1px solid #037;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
 
 

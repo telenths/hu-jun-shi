@@ -1,0 +1,18 @@
+[
+  { "img":"/images/logos/logo_acrel.jpg",
+    "link":"http://www.acrel.cn",
+    "alt":"安科瑞"
+  } ,
+  { "img":"/images/logos/logo_abb.jpg",
+    "link":"http://www.abb.com.cn",
+    "alt":"ABB"
+  } ,
+  { "img":"/images/logos/logo_schneider.gif",
+    "link":"http://www.schneider-electric.com",
+    "alt":"Schneider"
+  } ,
+  { "img":"/images/logos/logo_bjx.gif",
+    "link":"http://www.bjx.com.cn",
+    "alt":"北极星电力网"
+  }
+] 

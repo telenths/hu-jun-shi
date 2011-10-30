@@ -1,15 +1,12 @@
-function initMenu() {
-    $.getJSON('/json/menu_nav.json?t=$[DATETIME]', function(data) {
+function initFooterLinks() {
+    $.getJSON('/json/link_coop.json?t=$[DATETIME]', function(data) {
         var html = "";
         $.each(data, function(entryIndex, entry) {
-            if (entry['menu']) {
-//                if (window.location.pathname == entry['link'])
-//                    html += "<td class='current_menu_nav_item'>" + entry['menu'] + "</td>";
-//                else
-                    html += "<td class='menu_nav_item'><a style='width:100%' href='" + entry['link'] + "'><div style='width:100%'>" + entry['menu'] + "</div></a></td>";
+            if (entry['img']) {
+            	html += "<a target='_blank' href='"+entry['link']+"'><img src='"+entry['img']+"' alt='"+entry['alt']+"'></a>"
             }
         });
-        $('#menu_nav').prepend(html);
+        $('#coop_links').prepend(html);
     });
 }
 
@@ -36,7 +33,7 @@ function initMenuSolution(){
 }
 
 $(document).ready(function() {
-//    initMenu();
+	initFooterLinks();
     if($("#menu_solution")){
     	initMenuSolution();
     }
