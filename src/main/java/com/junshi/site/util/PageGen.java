@@ -87,7 +87,17 @@ public class PageGen {
                            + "<!--Page_Side_Menu_End-->";
 
 
-    private ParseSolutionMenu solutionMenuRefiner = new ParseSolutionMenu();
+    private ParseSolutionMenu solutionMenuRefiner = new ParseSolutionMenu(
+			"id=\"menu_solution\">", "<!--Page_Side_Menu_Start-->",
+			"./src/main/webapp/json/menu_solutions.json",
+			"/html/solutions/solution_"
+    		);
+    
+    private ParseSolutionMenu downloadMenuRefiner = new ParseSolutionMenu(
+			"id=\"menu_download\">", "<!--Page_Side_Menu_Start-->",
+			"./src/main/webapp/json/menu_downloads.json",
+			"/html/downloads/download_"
+    		);
     
     public static void main(String[] args) throws IOException {
 
@@ -137,6 +147,7 @@ public class PageGen {
         FileUtil.writeFile(file, str);
         
         solutionMenuRefiner.replaceSolutionMenu(file);
+		downloadMenuRefiner.replaceSolutionMenu(file);
         
     }
 
