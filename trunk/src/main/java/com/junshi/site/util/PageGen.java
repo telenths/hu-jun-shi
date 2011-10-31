@@ -44,7 +44,7 @@ public class PageGen {
                             + "      <tr id='menu_nav'>                                                                                        ".trim() + lineBreak
                             + "        <td class='menu_nav_item'><a style='width: 100%' href='/index.html'><div style='width: 100%'>首页</div></a></td>                          ".trim() + lineBreak
                             + "        <td class='menu_nav_item'><a style='width: 100%' href='/html/solutions/solution_00.html'><div style='width: 100%'>解决方案</div></a></td> ".trim() + lineBreak
-                            + "        <td class='menu_nav_item'><a style='width: 100%' href='/html/download.html'><div style='width: 100%'>资料下载</div></a></td>              ".trim() + lineBreak
+                            + "        <td class='menu_nav_item'><a style='width: 100%' href='/html/downloads/download_00.html'><div style='width: 100%'>资料下载</div></a></td>              ".trim() + lineBreak
                             + "        <td class='menu_nav_item'><a style='width: 100%' href='/html/contact.html'><div style='width: 100%'>联系我们</div></a></td>               ".trim() + lineBreak
                             + "      </tr>                                                                                                                                       ".trim() + lineBreak
                             + "  </table>                                                                                                                                        ".trim() + lineBreak
@@ -76,7 +76,7 @@ public class PageGen {
     private final String pageSideMenuReplacement = "<!--Page_Side_Menu_Start-->" + lineBreak
                            + " <div class='menu_nolink'>联系方式</div>                                     ".trim() + lineBreak
                            + " <table border='0' cellspacing='0' cellpadding='0' class='salse_section'>    ".trim() + lineBreak
-                           + "   <tr><td>蔡亮&nbsp;&nbsp;</td><td></td></tr>                               ".trim() + lineBreak
+                           + "   <tr><td>联系人:</td><td>蔡&nbsp;亮</td></tr>                               ".trim() + lineBreak
                            + "   <tr><td>电话:</td><td>13764193800</td></tr>                               ".trim() + lineBreak
                            + "   <tr><td>QQ:</td><td>1272489503</td></tr>                                  ".trim() + lineBreak
                            + "   <tr><td>Email:</td><td>bkcailiang@163.com</td></tr>                       ".trim() + lineBreak
@@ -86,9 +86,9 @@ public class PageGen {
                            + " <script type='text/javascript' src='http://cbjs.baidu.com/js/o.js'></script>   ".trim() + lineBreak
                            + "<!--Page_Side_Menu_End-->";
 
-    private final String solutionSideMenuReplacement = "";
 
-
+    private ParseSolutionMenu solutionMenuRefiner = new ParseSolutionMenu();
+    
     public static void main(String[] args) throws IOException {
 
         PageGen p = new PageGen();
@@ -135,6 +135,9 @@ public class PageGen {
         str = replace(str, "Page_Footer", pageFooterReplacement);
         str = replace(str, "Page_Side_Menu", pageSideMenuReplacement);
         FileUtil.writeFile(file, str);
+        
+        solutionMenuRefiner.replaceSolutionMenu(file);
+        
     }
 
     public String replace(String str, String mark, String replacement){

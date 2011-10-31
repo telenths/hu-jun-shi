@@ -133,25 +133,27 @@ p {
 /*     text-shadow:#000 1px 1px 0; */
 }
 
-.menu_solu, .menu_solu_item, .menu_solu_item_current, .menu_nolink {
+.menu_link, .menu_nolink, .menu_solu_item, .menu_solu_item_current {
 	height: 30px;
     line-height:30px;
 	color: #036;
 /*     text-shadow:#EEE 1px 1px 0; */
-    border-bottom: 1px dotted darkGray;
 }
 
-.menu_solu, .menu_nolink {
+.menu_link, .menu_nolink {
 	font-size: 15px;
     font-weight: bold;
+    margin-top:0.5em;
+    border-top: 1px solid darkGray;
 }
 
 .menu_solu_item, .menu_solu_item_current {
 	font-size: 12px;
     text-indent: 2em;
     background: url(/images/contact_icon.jpg) no-repeat 10px 11px;
+    border-top: 1px dotted darkGray;
 }
-.menu_solu_item:hover, .menu_solu:hover, .menu_solu_item_current:hover {
+.menu_solu_item:hover, .menu_link:hover, .menu_solu_item_current:hover {
 	background-color: #EEE;
     text-shadow:#FFF 1px 1px 0;
 }
@@ -162,10 +164,8 @@ p {
 .salse_section {
     color: #036;
     padding-left:1em;
-}
-.salse_section tr:first-child {
-	font-size:15px;
-	text-align:right;
+    border-top: 1px dotted darkGray;
+    width:100%;
 }
 
 
