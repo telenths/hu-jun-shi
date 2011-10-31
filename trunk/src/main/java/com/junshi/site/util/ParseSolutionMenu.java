@@ -10,20 +10,29 @@ import com.junshi.util.FileUtil;
 
 public class ParseSolutionMenu {
 
-    public static void main(String[] args) throws IOException {
-        new ParseSolutionMenu().getSolutionMenu();
-    }
+	private String menuStart, menuEnd, jsonFile, pathCheck;
 
-    public void replaceSolutionMenu(File file) throws IOException{
-        if(!isSolutionFile(file))
+    public ParseSolutionMenu(String menuStart, String menuEnd, String jsonFile, String pathCheck) {
+		super();
+		this.menuStart = menuStart;
+		this.menuEnd = menuEnd;
+		this.jsonFile = jsonFile;
+		this.pathCheck = pathCheck;
+	}
+
+	public void replaceSolutionMenu(File file) throws IOException{
+        if(!isParsable(file))
             return;
+
+		System.out.println("  +---- inserting menu for " + menuStart);
+
         String str = FileUtil.readFile(file);
-        String menuId = "id=\"menu_solution\">";
+		String menuId = menuStart;
         int startPoint = str.indexOf(menuId);
         if(startPoint < 0)
             return;
 
-        int endPoint = str.indexOf("<!--Page_Side_Menu_Start-->", startPoint+menuId.length());
+		int endPoint = str.indexOf(menuEnd, startPoint + menuId.length());
         
         StringBuffer buf = new StringBuffer(str);
 //        buf.insert(startPoint + menuId.length(), "\n" + getMenuString(file.getName()));
@@ -65,14 +74,14 @@ public class ParseSolutionMenu {
         return buf.toString();
     }
     
-    private boolean isSolutionFile(File file){
-        return file.getAbsolutePath().indexOf("/html/solutions/solution_") > 0;
+    private boolean isParsable(File file){
+		return file.getAbsolutePath().indexOf(pathCheck) > 0;
     }
 
     private SolutionMenu[] getSolutionMenu() throws IOException{
-        String jsonFile = FileUtil.readFile(new File("./src/main/webapp/json/menu_solutions.json"));
+		String jsonFileText = FileUtil.readFile(new File(jsonFile));
         Gson gson = new Gson();
-        SolutionMenu[] solutionMenu = gson.fromJson(jsonFile, SolutionMenu[].class);
+        SolutionMenu[] solutionMenu = gson.fromJson(jsonFileText, SolutionMenu[].class);
         return solutionMenu;
     }
 }

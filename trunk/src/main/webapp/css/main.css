@@ -133,7 +133,7 @@ p {
 /*     text-shadow:#000 1px 1px 0; */
 }
 
-.menu_link, .menu_nolink, .menu_solu_item, .menu_solu_item_current {
+.menu_link, .menu_nolink, .menu_item, .menu_item_current {
 	height: 30px;
     line-height:30px;
 	color: #036;
@@ -147,17 +147,17 @@ p {
     border-top: 1px solid darkGray;
 }
 
-.menu_solu_item, .menu_solu_item_current {
+.menu_item, .menu_item_current {
 	font-size: 12px;
     text-indent: 2em;
     background: url(/images/contact_icon.jpg) no-repeat 10px 11px;
     border-top: 1px dotted darkGray;
 }
-.menu_solu_item:hover, .menu_link:hover, .menu_solu_item_current:hover {
+.menu_item:hover, .menu_link:hover, .menu_item_current:hover {
 	background-color: #EEE;
     text-shadow:#FFF 1px 1px 0;
 }
-.menu_solu_item_current {
+.menu_item_current {
 	color: #D33;
 }
 
