@@ -64,6 +64,13 @@ public class PageGen {
                           + "     <td id='footer_text'>胡君实（上海）©2011 <br>上海嘉定马东工业园区育绿路253号</td>         ".trim() + lineBreak
                           + "   </tr>                                                                              ".trim() + lineBreak
                           + " </table>                                                                             ".trim() + lineBreak
+                          + "   <table border='0' cellspacing='0' cellpadding='0' id='out_dir_links'>                                                                                                              ".trim() + lineBreak
+                          + "     <tr><td>                                                                                                                                                                         ".trim() + lineBreak
+                          + "   <a href='http://www.ttuu.com/' target='_blank'><img src='http://www.ttuu.com/dir_en.gif' border='0' width='80' height='15' alt='网站提交-免费收录各类优秀网站的中文网站目录' /></a>  ".trim() + lineBreak
+                          + "   <a href='http://www.coodir.com/' target='_blank' ><img alt='Coodir' src='http://img.coodir.com/dir8015_en.gif' width=80 height=15 border=0></a>                                    ".trim() + lineBreak
+                          + "   <a href='http://www.dzhai.com/' target='_blank'><img src='http://www.dzhai.com/Config/Images/Logo8015_en.gif' border='0' width='80' height='15' alt='第一摘网站目录' /></a>        ".trim() + lineBreak
+                          + "     </td></tr>                                                                                                                                                                       ".trim() + lineBreak
+                          + "   </table>                                                                                                                                                                          ".trim() + lineBreak
                           + "<!--Page_Footer_End-->";
 
     private final String pageSideMenuReplacement = "<!--Page_Side_Menu_Start-->" + lineBreak
@@ -78,7 +85,7 @@ public class PageGen {
                            + " <script type='text/javascript' >BAIDU_CLB_SLOT_ID = '231221';</script>       ".trim() + lineBreak
                            + " <script type='text/javascript' src='http://cbjs.baidu.com/js/o.js'></script>   ".trim() + lineBreak
                            + "<!--Page_Side_Menu_End-->";
-    
+
     private final String solutionSideMenuReplacement = "";
 
 
