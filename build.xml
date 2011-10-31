@@ -32,7 +32,7 @@
     </target>
 	
     <target name="upload_junshi" depends="prepare-site">
-        <ftp server="www.junshitech.net" remotedir="/" userid="junshitech" password="Hushang12!@" verbose="yes" passive="yes" depends="yes" timediffauto="true">
+        <ftp server="118.139.186.1" remotedir="/" userid="junshitech" password="Hushang12!@" verbose="yes" passive="yes" depends="yes" timediffauto="true">
             <fileset dir="./site/">
                 <include name="**/*" />
                 <exclude name="**/Thumbs.db" />
