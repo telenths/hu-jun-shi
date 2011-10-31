@@ -1,6 +1,6 @@
 [
   { "menu":"解决方案",
-    "clazz":"menu_solu",
+    "clazz":"menu_link",
     "link":"/html/solutions/solution_00.html",
     "data":
            [ 
