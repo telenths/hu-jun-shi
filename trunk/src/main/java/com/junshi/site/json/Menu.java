@@ -1,14 +1,14 @@
 package com.junshi.site.json;
 
 
-public class SolutionMenu {
+public class Menu {
 
     private String menu;
     private String clazz;
     private String link;
-    private SolutionMenuItem[] data;
+    private MenuItem[] data;
 
-    public SolutionMenu(String menu, String clazz, String link, SolutionMenuItem[] data) {
+    public Menu(String menu, String clazz, String link, MenuItem[] data) {
         super();
         this.menu = menu;
         this.clazz = clazz;
@@ -33,10 +33,10 @@ public class SolutionMenu {
     public void setLink(String link) {
         this.link = link;
     }
-    public SolutionMenuItem[] getData() {
+    public MenuItem[] getData() {
         return data;
     }
-    public void setData(SolutionMenuItem[] data) {
+    public void setData(MenuItem[] data) {
         this.data = data;
     }
 

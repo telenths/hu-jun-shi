@@ -1,12 +1,12 @@
 package com.junshi.site.json;
 
-public class SolutionMenuItem {
+public class MenuItem {
 
     private String item;
     private String clazz;
     private String link;
 
-    public SolutionMenuItem(String item, String clazz, String link) {
+    public MenuItem(String item, String clazz, String link) {
         super();
         this.item = item;
         this.clazz = clazz;
