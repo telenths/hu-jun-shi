@@ -171,13 +171,13 @@ p {
 
 /*** Content Section ***/
 
-#table_contact {
-	font-size: 15px;
-	margin-top: 5em;
-    margin-left: 5em;
-	height: 150px;
-/* 	border: 1px solid #000; */
-}
+/* #table_contact { */
+/* 	font-size: 15px; */
+/* 	margin-top: 5em; */
+/*     margin-left: 5em; */
+/* 	height: 150px; */
+/* /* 	border: 1px solid #000; */ 
+/* } */
 
 .section_title {
     font-size: 15px;
@@ -195,7 +195,32 @@ p {
     border-bottom: 1px dotted #000;
 }
 
-
-
+#download_table_papers {
+	width:650px;
+	border-collapse:collapse;
+	margin-left:2em;
+}
+#download_table_papers th {
+    height: 18px;
+/*     font-size: 14px; */
+    font-weight:bold;
+/*     background-color: #666; */
+/*     color: #FFF; */
+    border-bottom: 1px solid #000;
+}
+#download_table_papers td {
+	border-bottom: 1px dotted #000;
+	text-align:center;
+    height: 18px;
+}
+#download_table_papers td:nth-child(1) {
+	text-align:left;
+}
+#download_table_papers td:nth-child(2) {
+    text-align:right;
+}
+#download_table_papers td a:link{
+	text-decoration:underline;
+}
 
 
