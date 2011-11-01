@@ -10,6 +10,7 @@ import com.junshi.util.FileUtil;
 public class PageGen {
 
     private final String lineBreak = System.getProperty("line.separator");
+    private final String fileSeparator = System.getProperty("file.separator");
 
     private final String headReplacement = "<!--Head_Import_Start-->" + lineBreak
                            + " <meta name='keywords' content='电表,智能电网,解决方案,安科瑞,传感器,智能电力监控仪表,智能马达控制器,电量传感器,导轨式安装电表,火灾监控装置,数显继电器,电力监控系统,能耗监测系统' />".trim() + lineBreak
@@ -87,18 +88,18 @@ public class PageGen {
                            + "<!--Page_Side_Menu_End-->";
 
 
-    private MenuRefiner solutionMenuRefiner = new MenuRefiner(
+    private final InjectRefiner solutionMenuRefiner = new InjectRefiner(
 			"id=\"menu_solution\">", "<!--Page_Side_Menu_Start-->",
 			"./src/main/webapp/json/menu_solutions.json",
-			"/html/solutions/solution_"
+			"html"+fileSeparator+"solutions"+fileSeparator+"solution_"
     		);
-    
-    private MenuRefiner downloadMenuRefiner = new MenuRefiner(
+
+    private final InjectRefiner downloadMenuRefiner = new InjectRefiner(
 			"id=\"menu_download\">", "<!--Page_Side_Menu_Start-->",
 			"./src/main/webapp/json/menu_downloads.json",
-			"/html/downloads/download_"
+            "html"+fileSeparator+"downloads"+fileSeparator+"download_"
     		);
-    
+
     public static void main(String[] args) throws IOException {
 
         PageGen p = new PageGen();
@@ -145,10 +146,10 @@ public class PageGen {
         str = replace(str, "Page_Footer", pageFooterReplacement);
         str = replace(str, "Page_Side_Menu", pageSideMenuReplacement);
         FileUtil.writeFile(file, str);
-        
-        solutionMenuRefiner.replaceSolutionMenu(file);
-		downloadMenuRefiner.replaceSolutionMenu(file);
-        
+
+        solutionMenuRefiner.refine(file);
+		downloadMenuRefiner.refine(file);
+
     }
 
     public String replace(String str, String mark, String replacement){
