@@ -8,11 +8,11 @@ import com.junshi.site.json.SolutionMenu;
 import com.junshi.site.json.SolutionMenuItem;
 import com.junshi.util.FileUtil;
 
-public class ParseSolutionMenu {
+public class MenuRefiner {
 
 	private String menuStart, menuEnd, jsonFile, pathCheck;
 
-    public ParseSolutionMenu(String menuStart, String menuEnd, String jsonFile, String pathCheck) {
+    public MenuRefiner(String menuStart, String menuEnd, String jsonFile, String pathCheck) {
 		super();
 		this.menuStart = menuStart;
 		this.menuEnd = menuEnd;

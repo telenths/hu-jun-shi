@@ -87,13 +87,13 @@ public class PageGen {
                            + "<!--Page_Side_Menu_End-->";
 
 
-    private ParseSolutionMenu solutionMenuRefiner = new ParseSolutionMenu(
+    private MenuRefiner solutionMenuRefiner = new MenuRefiner(
 			"id=\"menu_solution\">", "<!--Page_Side_Menu_Start-->",
 			"./src/main/webapp/json/menu_solutions.json",
 			"/html/solutions/solution_"
     		);
     
-    private ParseSolutionMenu downloadMenuRefiner = new ParseSolutionMenu(
+    private MenuRefiner downloadMenuRefiner = new MenuRefiner(
 			"id=\"menu_download\">", "<!--Page_Side_Menu_Start-->",
 			"./src/main/webapp/json/menu_downloads.json",
 			"/html/downloads/download_"
