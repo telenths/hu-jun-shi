@@ -82,9 +82,9 @@ public class PageGen {
                            + "   <tr><td>QQ:</td><td>1272489503</td></tr>                                  ".trim() + lineBreak
                            + "   <tr><td>Email:</td><td>bkcailiang@163.com</td></tr>                       ".trim() + lineBreak
                            + " </table>                                                                    ".trim() + lineBreak
-                           + " <!-- 广告位：JunShi_Side -->                                                 ".trim() + lineBreak
-                           + " <script type='text/javascript' >BAIDU_CLB_SLOT_ID = '234234';</script>       ".trim() + lineBreak
-                           + " <script type='text/javascript' src='http://cbjs.baidu.com/js/o.js'></script>   ".trim() + lineBreak
+//                           + " <!-- 广告位：JunShi_Side -->                                                 ".trim() + lineBreak
+//                           + " <script type='text/javascript' >BAIDU_CLB_SLOT_ID = '234234';</script>       ".trim() + lineBreak
+//                           + " <script type='text/javascript' src='http://cbjs.baidu.com/js/o.js'></script>   ".trim() + lineBreak
                            + "<!--Page_Side_Menu_End-->";
 
     private final InjectRefiner solutionMenuRefiner = new InjectRefiner(
