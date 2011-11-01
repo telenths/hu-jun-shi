@@ -9,9 +9,9 @@
         <tstamp>
              <format property="datetime.for.replace" pattern="yyyyMMddhhmm" />
         </tstamp>
-    	<replace file="site/js/page_init.js" token="$[DATETIME]" value="${datetime.for.replace}" encoding="UTF-8"/>
-        <replace file="site/images/bcastr.xml" token="#DATETIME#" value="${datetime.for.replace}" encoding="UTF-8"/>
-    	<replace dir="site/html/" token="#DATETIME#" value="${datetime.for.replace}" encoding="UTF-8">
+    	<replace file="./site/js/page_init.js" token="$[DATETIME]" value="${datetime.for.replace}" encoding="UTF-8"/>
+        <replace file="./site/images/bcastr.xml" token="#DATETIME#" value="${datetime.for.replace}" encoding="UTF-8"/>
+    	<replace dir="./site/html/" token="#DATETIME#" value="${datetime.for.replace}" encoding="UTF-8">
     	  <include name="**/*.html"/>
     	</replace>
     </target>
