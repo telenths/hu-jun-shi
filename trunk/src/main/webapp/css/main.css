@@ -2,7 +2,7 @@
 
 body {
     margin:0px;
-    font-family: 'Microsoft YaHei', Verdana, 'BitStream vera Sans', Tahoma, Helvetica, sans-serif;
+    font-family: 'Microsoft YaHei', '宋体', Verdana, 'BitStream vera Sans', Tahoma, Helvetica, sans-serif;
     font-size: 12px ;
     color:#333 !important;
     background-color:#EEE;
@@ -200,21 +200,21 @@ p {
 	border-collapse:collapse;
 	margin-left:2em;
 }
+
 #download_table_papers th {
     height: 18px;
-/*     font-size: 14px; */
     font-weight:bold;
-/*     background-color: #666; */
-/*     color: #FFF; */
-    border-bottom: 1px solid #000;
+    border-bottom: 2px solid #000;
 }
 #download_table_papers td {
-	border-bottom: 1px dotted #000;
+	font-family: '宋体', 'Microsoft YaHei', Verdana;
+    border-bottom: 1px dotted #000;
 	text-align:center;
     height: 18px;
 }
 #download_table_papers td:nth-child(1) {
 	text-align:left;
+	padding-left:1em;
 }
 #download_table_papers td:nth-child(2) {
     text-align:right;
