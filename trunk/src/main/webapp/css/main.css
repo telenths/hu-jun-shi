@@ -4,14 +4,14 @@ body {
     margin:0px;
     font-family: 'Microsoft YaHei', '宋体', Verdana, 'BitStream vera Sans', Tahoma, Helvetica, sans-serif;
     font-size: 12px ;
-    color:#333 !important;
+    color:#036 !important;
     background-color:#EEE;
 }
 
-a:visited { color:#000;text-decoration:none;}
-a:link    { color:#000;text-decoration:none;}
-a:active  { color:#000;text-decoration:none;}
-a:hover   { color:#000;text-decoration:underline;}
+a:visited { color:#036;text-decoration:none;}
+a:link    { color:#036;text-decoration:none;}
+a:active  { color:#036;text-decoration:none;}
+a:hover   { color:#036;text-decoration:underline;}
 
 center>table {
 	width:970px;
@@ -64,6 +64,17 @@ p {
 
 #table_body {
 	padding: 1em;
+	padding-bottom:0px;
+}
+
+.page_footer{
+	height: 30px;
+	text-align:center;
+	color:#FFF;
+	background-color: #036;
+	font-size:15px;
+	font-weight:bold;
+	border-bottom: 1px dotted #333;
 }
 
 #footer {
@@ -75,7 +86,7 @@ p {
 
 #footer_links {
 	padding-top: 0.5em;
-    border-top: 1px dotted #EEE;
+    border-top: 1px dotted #DDD;
 	border-bottom: 1px dotted #333;
 }
 
@@ -91,6 +102,9 @@ p {
     margin-right: 0.5em;
 }
 
+#out_dir_links {
+	text-align:center;
+}
 
 /***   Menu Section  ***/
 
@@ -171,13 +185,13 @@ p {
 
 /*** Content Section ***/
 
-/* #table_contact { */
-/* 	font-size: 15px; */
-/* 	margin-top: 5em; */
-/*     margin-left: 5em; */
-/* 	height: 150px; */
-/* /* 	border: 1px solid #000; */ 
-/* } */
+#table_contact {
+	font-size: 15px;
+	margin-top: 5em;
+    margin-left: 5em;
+	height: 150px;
+/* 	border: 1px solid #000; */
+}
 
 .section_title {
     font-size: 15px;
@@ -195,32 +209,35 @@ p {
     border-bottom: 1px dotted #000;
 }
 
-#download_table_papers {
+#download_content_table {
 	width:650px;
 	border-collapse:collapse;
 	margin-left:2em;
+	margin-bottom: 2em;
 }
 
-#download_table_papers th {
-    height: 18px;
+#download_content_table th {
+    height: 25px;
     font-weight:bold;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #036;
 }
-#download_table_papers td {
+#download_content_table td {
 	font-family: '宋体', 'Microsoft YaHei', Verdana;
-    border-bottom: 1px dotted #000;
+    border-bottom: 1px dotted #036;
 	text-align:center;
-    height: 18px;
+    height: 25px;
 }
-#download_table_papers td:nth-child(1) {
+#download_content_table td:nth-child(1) {
 	text-align:left;
 	padding-left:1em;
 }
-#download_table_papers td:nth-child(2) {
+#download_content_table td:nth-child(2) {
     text-align:right;
 }
-#download_table_papers td a:link{
+#download_content_table td a:link{
 	text-decoration:underline;
 }
-
+#download_content_table tbody tr:hover{
+	background-color: #CEF;
+}
 
