@@ -70,6 +70,7 @@ public class PageGen {
                           + "   <a href='http://www.ttuu.com/' target='_blank'><img src='http://www.ttuu.com/dir_en.gif' border='0' width='80' height='15' alt='网站提交-免费收录各类优秀网站的中文网站目录' /></a>  ".trim() + lineBreak
                           + "   <a href='http://www.coodir.com/' target='_blank' ><img alt='Coodir' src='http://img.coodir.com/dir8015_en.gif' width=80 height=15 border=0></a>                                    ".trim() + lineBreak
                           + "   <a href='http://www.dzhai.com/' target='_blank'><img src='http://www.dzhai.com/Config/Images/Logo8015_en.gif' border='0' width='80' height='15' alt='第一摘网站目录' /></a>        ".trim() + lineBreak
+                          + "   <a href='http://www.ratedir.com/' target='_blank'><img src='http://www.ratedir.com/images/logo8015_en.gif' border='0' width='80' height='15' alt='锐帝网站目录-免费收录各行业优秀网站的中文网站目录' /></a> ".trim() + lineBreak
                           + "     </td></tr>                                                                                                                                                                       ".trim() + lineBreak
                           + "   </table>                                                                                                                                                                          ".trim() + lineBreak
                           + "<!--Page_Footer_End-->";
