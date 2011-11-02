@@ -3,6 +3,10 @@
     "link":"http://www.acrel.cn",
     "alt":"安科瑞"
   } ,
+  { "img":"/images/logos/logo_siemens.gif",
+    "link":"http://www.siemens.com/answers/cn/zh/",
+    "alt":"Siemens"
+  } ,
   { "img":"/images/logos/logo_abb.jpg",
     "link":"http://www.abb.com.cn",
     "alt":"ABB"
