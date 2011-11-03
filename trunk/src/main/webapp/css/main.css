@@ -25,23 +25,6 @@ p {
     padding-right: 1em;
 }
 
-.solution_content p {
-	text-indent: 0px;
-}
-.solution_content table {
-    border: 1px solid #036;
-    border-right: 0px solid #036;
-    border-bottom: 0px solid #036;
-}
-.solution_content td {
-    border-bottom: 1px solid #036;
-    border-right: 1px solid #036;
-}
-.solution_content thead {
-	background-color:#EEE;
-	font-weight:bold;
-}
-
 .center_align_left{
     text-align:right;
     font-weight:bold;
@@ -67,7 +50,7 @@ p {
 	padding-bottom:0px;
 }
 
-.page_footer{
+#page_footer{
 	height: 30px;
 	text-align:center;
 	color:#FFF;
@@ -108,18 +91,14 @@ p {
 
 /***   Menu Section  ***/
 
-.left_menu {
-    width: 250px;
-    border-right: 1px dotted #000;
-}
-
+/* ------------- Top Menu --------------- */
 #menu td {
     margin: 0;
 /*     padding: 5px 10px; */
     white-space: nowrap;
     text-align: center;
     font-weight:bold;
-    font-size:12px;
+    font-size:15px;
     color: #2875DE;
     text-shadow:#FFF 1px 1px 0;
 }
@@ -128,7 +107,6 @@ p {
     color: #FFF;
     text-shadow:#000 1px 1px 0;
 }
-
 .menu_nav_item {
 /*     background: #EAEBD8; */
     background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkCAIAAADITs03AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADxJREFUeF7litsRACAMwrD77+Q0rtGoV98r+MEFchhgkr4NnZyb3bk/LM/yMCjiH4wots/++hYR3iXLJVWUBS1AtOi2fwAAAABJRU5ErkJggg==);
@@ -145,6 +123,12 @@ p {
     background: #EEE;
 /*     color: #FFF; */
 /*     text-shadow:#000 1px 1px 0; */
+}
+
+/* ------------- Left Menu --------------- */
+.left_menu {
+    width: 250px;
+    border-right: 1px dotted #000;
 }
 
 .menu_link, .menu_nolink, .menu_item, .menu_item_current {
@@ -172,19 +156,20 @@ p {
     text-shadow:#FFF 1px 1px 0;
 }
 .menu_item_current {
-	color: #D33;
+	color: #FF4818;
 }
 
 .salse_section {
     color: #036;
-    padding-left:1em;
-    border-top: 1px dotted darkGray;
     width:100%;
+    height: 30px;
+    line-height:30px;
+}
+.salse_section tr:first-child td {
+	border-top: 1px dotted darkGray;
 }
 
-
-/*** Content Section ***/
-
+/*** Contac.html Content Section ***/
 #table_contact {
 	font-size: 15px;
 	margin-top: 5em;
@@ -193,6 +178,7 @@ p {
 /* 	border: 1px solid #000; */
 }
 
+/*** Index Content Section ***/
 .section_title {
     font-size: 15px;
     font-weight: bold;
@@ -209,6 +195,36 @@ p {
     border-bottom: 1px dotted #000;
 }
 
+/* ------------------ solution ------------- */
+
+#solution_index_table {
+	margin: 1em;
+    width: 100%;
+}
+#solution_index_table td {
+    width: 50%;
+}
+
+.solution_content p {
+    text-indent: 0px;
+}
+.solution_content table {
+    border: 1px solid #036;
+    border-right: 0px solid #036;
+    border-bottom: 0px solid #036;
+}
+.solution_content td {
+    border-bottom: 1px solid #036;
+    border-right: 1px solid #036;
+}
+.solution_content thead {
+    background-color:#EEE;
+    font-weight:bold;
+}
+
+/* ------------------ solution END ------------- */
+
+/* ------------------ download ------------- */ 
 #download_content_table {
 	width:650px;
 	border-collapse:collapse;
@@ -241,3 +257,4 @@ p {
 	background-color: #CEF;
 }
 
+/* ------------------ download END ------------- */ 
