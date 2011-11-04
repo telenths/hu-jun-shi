@@ -32,7 +32,7 @@ public class InjectRefiner {
 
 		injectSideMenu(menuStart, menuEnd, buf, getMenuString(file.getName(), menus));
 
-        String titleStart = "<title>胡君实（上海）";
+		String titleStart = "<title>上海安科瑞能源管理有限公司";
         String titleEnd = "</title>";
         injectSideMenu(titleStart, titleEnd, buf, getTitleString(file.getName(), menus));
 
