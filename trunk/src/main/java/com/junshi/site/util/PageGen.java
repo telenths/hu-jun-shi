@@ -16,10 +16,10 @@ public class PageGen {
                            + " <meta name='keywords' content='电表,智能电网,解决方案,安科瑞,传感器,智能电力监控仪表,智能马达控制器,电量传感器,导轨式安装电表,火灾监控装置,数显继电器,电力监控系统,能耗监测系统' />".trim() + lineBreak
                            + " <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>                         ".trim() + lineBreak
                            + " <title>上海安科瑞能源管理有限公司</title>                                                                ".trim() + lineBreak
+                           + " <link type='text/css' rel='stylesheet' href='/css/main.css?t=#DATETIME#' />                ".trim() + lineBreak
                            + " <script type='text/javascript' src='/js/googletrack.js?t=#DATETIME#'></script>             ".trim() + lineBreak
                            + " <script type='text/javascript' src='/js/jquery-1.6.4.min.js?t=#DATETIME#'></script>        ".trim() + lineBreak
                            + " <script type='text/javascript' src='/js/page_init.js?t=#DATETIME#'></script>               ".trim() + lineBreak
-                           + " <link type='text/css' rel='stylesheet' href='/css/main.css?t=#DATETIME#' />                ".trim() + lineBreak
                            + "<!--Head_Import_End-->";
 
     private final String pageHeaderReplacement = "<!--Page_Header_Start-->" + lineBreak
@@ -52,6 +52,9 @@ public class PageGen {
                             + "<!--Page_Header_End-->";
 
     private final String pageFooterReplacement = "<!--Page_Footer_Start-->"            + lineBreak
+    		              + " <table border='0' cellspacing='0' cellpadding='0' id='page_footer'>                           ".trim() + lineBreak
+    		              + "   <tr><td colspan='2'>最新价格及详细内容欢迎咨询。电话：13764193800 邮件：bkcailiang@163.com</td></tr> ".trim() + lineBreak
+    		              + " </table>                                                                                      ".trim() + lineBreak
                           + " <table border='0' cellspacing='0' cellpadding='0' id='footer_links'>                 ".trim() + lineBreak
                           + "   <tr>                                                                               ".trim() + lineBreak
                           + "     <td>合作伙伴</td>                                                                  ".trim() + lineBreak
@@ -62,7 +65,7 @@ public class PageGen {
                           + " </table>                                                                             ".trim() + lineBreak
                           + " <table border='0' cellspacing='0' cellpadding='0' id='footer'>                       ".trim() + lineBreak
                           + "   <tr>                                                                               ".trim() + lineBreak
-                          + "     <td id='footer_text'>上海安科瑞能源管理有限公司©2011 <br>上海嘉定马东工业园区育绿路253号</td>         ".trim() + lineBreak
+                          + "     <td id='footer_text'>上海安科瑞能源管理有限公司 © 2011 <br>上海嘉定马东工业园区育绿路253号</td>         ".trim() + lineBreak
                           + "   </tr>                                                                              ".trim() + lineBreak
                           + " </table>                                                                             ".trim() + lineBreak
                           + "   <table border='0' cellspacing='0' cellpadding='0' id='out_dir_links'>                                                                                                              ".trim() + lineBreak
