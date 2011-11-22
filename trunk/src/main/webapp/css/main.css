@@ -211,20 +211,20 @@ p {
 
 /* ------------------ solution ------------- */
 
-#solution_index_table {
+#site_index_table {
 	margin-left: 1em;
     width: 680px;
 }
-#solution_index_table th {
+#site_index_table th {
     width: 50%;
 }
 
-#solution_index_table th a:link   { color: #FF4818; }
-#solution_index_table th a:active { color: #FF4818; }
-#solution_index_table th a:hover  { color: #FF4818; }
-#solution_index_table th a:visited{ color: #FF4818; }
+#site_index_table th a:link   { color: #FF4818; }
+#site_index_table th a:active { color: #FF4818; }
+#site_index_table th a:hover  { color: #FF4818; }
+#site_index_table th a:visited{ color: #FF4818; }
 
-#solution_index_table th div {
+#site_index_table th div {
 	height: 40px;
 	line-height:40px;
     font-size:15px;
@@ -236,7 +236,7 @@ p {
     background-color: #EEE;
 }
 
-#solution_index_table td {
+#site_index_table td {
 	padding-bottom: 1em;
 	line-height: 20px;
 }
