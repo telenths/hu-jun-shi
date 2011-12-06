@@ -47,7 +47,7 @@ p {
 }
 
 #table_body {
-	padding: 1em;
+	padding: 0em;
 	padding-bottom:0px;
 }
 
@@ -129,10 +129,11 @@ p {
 /* ------------- Left Menu --------------- */
 .left_menu {
     width: 250px;
-    border-right: 1px dotted #000;
+    border-right: 1px solid #000;
 }
 
 .menu_link, .menu_nolink, .menu_item, .menu_item_current {
+	padding-left:1em;
 	height: 30px;
     line-height:30px;
 	color: #036;
@@ -144,16 +145,19 @@ p {
     font-weight: bold;
     margin-top:0.5em;
     border-top: 1px solid darkGray;
+    background-color: #59C;
+    color: #FFF;
 }
 
 .menu_item, .menu_item_current {
 	font-size: 13px;
     text-indent: 1em;
-    background: url(/images/contact_icon.jpg) no-repeat 0px 11px;
+    background: url(/images/contact_icon.jpg) no-repeat 8px 11px;
     border-top: 1px dotted darkGray;
 }
-.menu_item:hover, .menu_link:hover, .menu_item_current:hover {
+.menu_item:hover, .menu_item_current:hover {
 	background-color: #EEE;
+	color: #036;
     text-shadow:#FFF 1px 1px 0;
 }
 .menu_item_current {
