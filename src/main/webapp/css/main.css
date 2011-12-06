@@ -143,8 +143,10 @@ p {
 	font-size: 15px;
     font-weight: bold;
     margin-top:0.5em;
-    border-top: 1px solid darkGray;
-    background-color: #59C;
+/*     border-top: 1px solid darkGray; */
+    padding-left: 20px;
+/*     background-color: #59C; */
+    background: url(/images/background_bars.png) no-repeat -55px -50px;
     color: #FFF;
 }
 
