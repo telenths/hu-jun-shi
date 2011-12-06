@@ -136,7 +136,6 @@ p {
 	padding-left:1em;
 	height: 30px;
     line-height:30px;
-	color: #036;
 /*     text-shadow:#EEE 1px 1px 0; */
 }
 
@@ -154,6 +153,7 @@ p {
     text-indent: 1em;
     background: url(/images/contact_icon.jpg) no-repeat 8px 11px;
     border-top: 1px dotted darkGray;
+    color: #036;
 }
 .menu_item:hover, .menu_item_current:hover {
 	background-color: #EEE;
