@@ -79,7 +79,7 @@ public class PageGen {
                           + "<!--Page_Footer_End-->";
 
     private final String pageSideMenuReplacement = "<!--Page_Side_Menu_Start-->" + lineBreak
-                           + " <div class='menu_nolink'>联系方式</div>                                     ".trim() + lineBreak
+                           + " <a style='width:100%' href='/html/contact.html'><div class='menu_link'>联系方式</div></a>       ".trim() + lineBreak
                            + " <table border='0' cellspacing='0' cellpadding='0' class='salse_section'>    ".trim() + lineBreak
                            + "   <tr><td>联系人:</td><td>蔡&nbsp;亮</td></tr>                               ".trim() + lineBreak
                            + "   <tr><td>电话:</td><td>13764193800</td></tr>                               ".trim() + lineBreak
