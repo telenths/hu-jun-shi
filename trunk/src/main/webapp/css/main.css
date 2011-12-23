@@ -134,8 +134,8 @@ p {
 
 .menu_link, .menu_nolink, .menu_item, .menu_item_current {
 	padding-left:1em;
-	height: 30px;
-    line-height:30px;
+	height: 25px;
+    line-height:25px;
 /*     text-shadow:#EEE 1px 1px 0; */
 }
 
@@ -146,7 +146,8 @@ p {
 /*     border-top: 1px solid darkGray; */
     padding-left: 20px;
 /*     background-color: #59C; */
-    background: url(/images/background_bars.png) no-repeat -55px -50px;
+/*     background: url(/images/background_bars.png) no-repeat -55px -50px; */
+    background: url(/images/box_title.gif) no-repeat 0px 0px;
     color: #FFF;
 }
 
