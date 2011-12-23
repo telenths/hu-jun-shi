@@ -2,10 +2,11 @@
 
 body {
     margin:0px;
-    font-family: 'Microsoft YaHei', '宋体', Verdana, 'BitStream vera Sans', Tahoma, Helvetica, sans-serif;
+    font-family: Verdana, '新宋体', '宋体', 'Microsoft YaHei', 'BitStream vera Sans', Tahoma, Helvetica, sans-serif;
     font-size: 12px ;
     color:#036 !important;
     background-color:#EEE;
+    background-image: url('/images/metal_texture_1.jpg');
 }
 
 a:visited { color:#036;text-decoration:none;}
@@ -62,8 +63,9 @@ p {
 }
 
 #footer {
-    height:60px;
-    background-image:url('/images/gradientbottom.jpg');
+    height:50px;
+    background-image:url('/images/Copyright_bg.jpg');
+/*     background-image:url('/images/gradientbottom.jpg'); */
     text-align: center;
     font-size: 12px;
 }
@@ -152,9 +154,9 @@ p {
 }
 
 .menu_item, .menu_item_current {
-	font-size: 13px;
+	font-size: 12px;
     text-indent: 1em;
-    background: url(/images/contact_icon.jpg) no-repeat 8px 11px;
+    background: url(/images/contact_icon.jpg) no-repeat 8px 8px;
     border-top: 1px dotted darkGray;
     color: #036;
 }
@@ -190,19 +192,28 @@ p {
 
 /*** Index Content Section ***/
 .section_title {
+	height: 25px;
+	width: 50%;
+	color: #E00;
     font-size: 15px;
     font-weight: bold;
-    padding-top: 5px;
+    margin-top: 0.5em;
+    margin-left:0.5em;
     padding-left:1em;
+    line-height: 25px;
     vertical-align: top;
+    border-bottom: 1px solid #F00;
+    text-shadow:#EEE 1px 1px 0;
 }
 
 .section_content {
     font-size: 13px;
+    line-height: 20px;
     padding-left: 1em;
     padding-right: 4em;
+    text-align: justify;
     vertical-align: top;
-    border-bottom: 1px dotted #000;
+/*     border-bottom: 1px dotted #000; */
 }
 
 .content_title{
