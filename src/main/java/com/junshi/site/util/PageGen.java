@@ -32,23 +32,25 @@ public class PageGen {
                             + "         <param name='movie' value='/images/bcastr3.swf'>                                                  ".trim() + lineBreak
                             + "         <param name='quality' value='high'>                                                               ".trim() + lineBreak
                             + "         <param name='wmode' value='transparent'>                                                          ".trim() + lineBreak
-                            + "         <param name='FlashVars' value='bcastr_xml_url=/images/bcastr.xml?t=#DATETIME#'>                                ".trim() + lineBreak
+                            + "         <param name='FlashVars' value='bcastr_xml_url=/images/bcastr.xml?t=#DATETIME#'>                   ".trim() + lineBreak
                             + "         <embed src='/images/bcastr3.swf'                                                                  ".trim() + lineBreak
-                            + "          FlashVars='bcastr_xml_url=/images/bcastr.xml?t=#DATETIME#' quality='high'                                     ".trim() + lineBreak
+                            + "          FlashVars='bcastr_xml_url=/images/bcastr.xml?t=#DATETIME#' quality='high'                        ".trim() + lineBreak
                             + "        pluginspage='http://www.macromedia.com/go/getflashplayer' type='application/x-shockwave-flash'     ".trim() + lineBreak
                             + "              width='969' height='200'></embed>                                                            ".trim() + lineBreak
                             + "       </object>                                                                                           ".trim() + lineBreak
                             + "     </td>                                                                                                 ".trim() + lineBreak
                             + "   </tr>                                                                                                   ".trim() + lineBreak
                             + " </table>                                                                                                  ".trim() + lineBreak
-                            + "  <table border='0' cellspacing='0' cellpadding='0' id='menu'>                                                  ".trim() + lineBreak
-                            + "      <tr id='menu_nav'>                                                                                        ".trim() + lineBreak
-                            + "        <td class='menu_nav_item'><a style='width: 100%' href='/index.html'><div style='width: 100%'>首页</div></a></td>                          ".trim() + lineBreak
-                            + "        <td class='menu_nav_item'><a style='width: 100%' href='/html/solutions/solution_00.html'><div style='width: 100%'>解决方案</div></a></td> ".trim() + lineBreak
-                            + "        <td class='menu_nav_item'><a style='width: 100%' href='/html/downloads/download_00.html'><div style='width: 100%'>资料下载</div></a></td>              ".trim() + lineBreak
-                            + "        <td class='menu_nav_item'><a style='width: 100%' href='/html/contact.html'><div style='width: 100%'>联系我们</div></a></td>               ".trim() + lineBreak
-                            + "      </tr>                                                                                                                                       ".trim() + lineBreak
-                            + "  </table>                                                                                                                                        ".trim() + lineBreak
+                            + "  <table border='0' cellspacing='0' cellpadding='0' id='menu'>                                             ".trim() + lineBreak
+                            + "      <tr id='menu_nav'>                                                                                   ".trim() + lineBreak
+                            + "        <td class='menu_nav_item'>                                                                         ".trim() + lineBreak
+                            + "        <a href='/index.html'><span class='menu_nav_item_text'>首页</span></a>                             ".trim() + lineBreak
+                            + "        <a href='/html/solutions/solution_00.html'><span class='menu_nav_item_text'>解决方案</span></a>     ".trim() + lineBreak
+                            + "        <a href='/html/downloads/download_00.html'><span class='menu_nav_item_text'>资料下载</span></a>     ".trim() + lineBreak
+                            + "        <a href='/html/contact.html'><span class='menu_nav_item_text'>联系我们</span></a>                   ".trim() + lineBreak
+                            + "        </td>                                                                                               ".trim() + lineBreak
+                            + "      </tr>                                                                                                 ".trim() + lineBreak
+                            + "  </table>                                                                                                  ".trim() + lineBreak
                             + "<!--Page_Header_End-->";
 
     private final String pageFooterReplacement = "<!--Page_Footer_Start-->"            + lineBreak
