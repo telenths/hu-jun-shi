@@ -5,8 +5,9 @@ body {
     font-family: Verdana, '新宋体', '宋体', 'Microsoft YaHei', 'BitStream vera Sans', Tahoma, Helvetica, sans-serif;
     font-size: 12px ;
     color:#036 !important;
-    background-color:#EEE;
+    background-color: #EEE;
     background-image: url('/images/metal_texture_1.jpg');
+    background-attachment: fixed;
 }
 
 a:visited { color:#036;text-decoration:none;}
@@ -227,6 +228,7 @@ p {
 /* ------------------ solution ------------- */
 
 #site_index_table {
+	padding-top: 0.5em;
 	margin-left: 1em;
     width: 680px;
 }
