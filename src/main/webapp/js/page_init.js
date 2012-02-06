@@ -19,4 +19,17 @@ $(document).ready(function() {
 	$('.salse_section tr>td:even').addClass('center_align_left');
 	$('.salse_section tr>td:odd').addClass('center_align_right');
     
+	$('a[href$=".pdf"], a[href$=".PDF"], a[href$=".rar"]').click(function() {
+		var docTitle = $(this).parent().parent().children().first().text();
+		_gaq.push(['_setCustomVar', '1', 'ClicksOn', docTitle, '3']);
+		_gaq.push(['_trackEvent', 'Downloads', 'Download', docTitle]);
+	});
+	
+	$('a[href^="http://www.acrel.cn/"]').click(function() {
+		var docTitle = $(this).parent().parent().children().first().text();
+		_gaq.push(['_setCustomVar', '1', 'ClicksOn', docTitle, '3']);
+		_gaq.push(['_trackEvent', 'Downloads', 'Preview', docTitle]);
+	});
+	
+	
 });
