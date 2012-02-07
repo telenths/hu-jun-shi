@@ -140,6 +140,7 @@ p {
 	padding-left:1em;
 	height: 30px;
     line-height:30px;
+    text-align: left;
 /*     text-shadow:#EEE 1px 1px 0; */
 }
 
@@ -293,7 +294,7 @@ p {
 #download_content_table td {
 	font-family: '宋体', 'Microsoft YaHei', Verdana;
     border-bottom: 1px dotted #036;
-	text-align:center;
+/* 	text-align:center; */
     height: 25px;
 }
 #download_content_table td:nth-child(1) {
@@ -301,7 +302,10 @@ p {
 	padding-left:1em;
 }
 #download_content_table td:nth-child(2) {
-    text-align:right;
+    text-align: right;
+}
+#download_content_table td:nth-child(3),#download_content_table td:nth-child(4),#download_content_table td:nth-child(5) {
+    text-align: center;
 }
 #download_content_table td a:link{
 	text-decoration:underline;
