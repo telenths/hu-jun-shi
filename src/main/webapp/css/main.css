@@ -133,7 +133,6 @@ p {
 /* ------------- Left Menu --------------- */
 .left_menu {
     width: 240px;
-    border-right: 1px solid #000;
 }
 
 .menu_link, .menu_nolink, .menu_item, .menu_item_current {
@@ -141,13 +140,14 @@ p {
 	height: 30px;
     line-height:30px;
     text-align: left;
+    border-right: 1px solid #000;
 /*     text-shadow:#EEE 1px 1px 0; */
 }
 
 .menu_link, .menu_nolink {
 	font-size: 15px;
     font-weight: bold;
-    margin-top:0.5em;
+/*     padding-top:0.5em; */
     padding-left: 20px;
     background: url(/images/box_title.gif) no-repeat 0px 2px;
     color: #FFF;
@@ -176,6 +176,7 @@ p {
     width:100%;
     height: 30px;
     line-height:30px;
+    border-right: 1px solid #000;
 }
 .salse_section tr:first-child td {
 	border-top: 1px dotted darkGray;
