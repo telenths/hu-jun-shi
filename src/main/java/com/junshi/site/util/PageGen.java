@@ -47,7 +47,7 @@ public class PageGen {
                             + "        <a href='/index.html'><span class='menu_nav_item_text'>首页</span></a>                             ".trim() + lineBreak
                             + "        <a href='/html/solutions/solution_00.html'><span class='menu_nav_item_text'>解决方案</span></a>     ".trim() + lineBreak
                             + "        <a href='/html/downloads/download_00.html'><span class='menu_nav_item_text'>资料下载</span></a>     ".trim() + lineBreak
-                            + "        <a href='/html/contact.html'><span class='menu_nav_item_text'>联系我们</span></a>                   ".trim() + lineBreak
+                            + "        <a href='/html/about.html'><span class='menu_nav_item_text'>关于我们</span></a>                     ".trim() + lineBreak
                             + "        </td>                                                                                               ".trim() + lineBreak
                             + "      </tr>                                                                                                 ".trim() + lineBreak
                             + "  </table>                                                                                                  ".trim() + lineBreak
@@ -88,21 +88,21 @@ public class PageGen {
                            + "   <tr><td>QQ:</td><td>1272489503</td></tr>                                  ".trim() + lineBreak
                            + "   <tr><td>Email:</td><td>bkcailiang@163.com</td></tr>                       ".trim() + lineBreak
                            + " </table>                                                                    ".trim() + lineBreak
-//                           + " <!-- 广告位：JunShi_Side -->                                                 ".trim() + lineBreak
-//                           + " <script type='text/javascript' >BAIDU_CLB_SLOT_ID = '234234';</script>       ".trim() + lineBreak
-//                           + " <script type='text/javascript' src='http://cbjs.baidu.com/js/o.js'></script>   ".trim() + lineBreak
+                           + " <div style='height:1em; line-height:30px; border-right:1px solid #000;'> </div>                                          ".trim() + lineBreak
                            + "<!--Page_Side_Menu_End-->";
 
     private final InjectRefiner solutionMenuRefiner = new InjectRefiner(
-			"id=\"menu_solution\">", "<!--Page_Side_Menu_Start-->",
-			"./src/main/webapp/json/menu_solutions.json",
-			"html"+fileSeparator+"solutions"+fileSeparator+"solution_"
+			  "id=\"menu_solution\">"
+    		, "<!--Page_Side_Menu_Start-->"
+    		, "./src/main/webapp/json/menu_solutions.json"
+    		, "html"+fileSeparator+"solutions"+fileSeparator+"solution_"
     		);
 
     private final InjectRefiner downloadMenuRefiner = new InjectRefiner(
-			"id=\"menu_download\">", "<!--Page_Side_Menu_Start-->",
-			"./src/main/webapp/json/menu_downloads.json",
-            "html"+fileSeparator+"downloads"+fileSeparator+"download_"
+			  "id=\"menu_download\">"
+    		, "<!--Page_Side_Menu_Start-->"
+    		, "./src/main/webapp/json/menu_downloads.json"
+    		, "html"+fileSeparator+"downloads"+fileSeparator+"download_"
     		);
 
     public static void main(String[] args) throws IOException {
