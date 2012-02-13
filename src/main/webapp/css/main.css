@@ -185,9 +185,10 @@ p {
 /*** Contac.html Content Section ***/
 #table_contact {
 	font-size: 15px;
-	margin-top: 5em;
+	margin-top: 1em;
+    margin-bottom: 2em;
     margin-left: 5em;
-	height: 150px;
+	height: 100px;
 /* 	border: 1px solid #000; */
 }
 
