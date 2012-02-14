@@ -21,13 +21,13 @@ $(document).ready(function() {
     
 	$('a[href$=".pdf"], a[href$=".PDF"], a[href$=".rar"]').click(function() {
 		var docTitle = $(this).parent().parent().children().first().text();
-		_gaq.push(['_setCustomVar', '1', 'ClicksOn', docTitle, '3']);
+		_gaq.push(['_setCustomVar', '1', 'Download', docTitle, '3']);
 		_gaq.push(['_trackEvent', 'Downloads', 'Download', docTitle]);
 	});
 	
 	$('a[href^="http://www.acrel.cn/"]').click(function() {
 		var docTitle = $(this).parent().parent().children().first().text();
-		_gaq.push(['_setCustomVar', '1', 'ClicksOn', docTitle, '3']);
+		_gaq.push(['_setCustomVar', '1', 'Preview', docTitle, '3']);
 		_gaq.push(['_trackEvent', 'Downloads', 'Preview', docTitle]);
 	});
 	
