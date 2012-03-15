@@ -30,16 +30,18 @@ public class InjectRefiner {
         StringBuffer buf = new StringBuffer(str);
         Menu[] menus = getSideMenu();
 
-		injectSideMenu(menuStart, menuEnd, buf, getMenuString(file.getName(), menus));
+		injectText(menuStart, menuEnd, buf, getMenuString(file.getName(), menus));
 
 		String titleStart = "<title>上海安科瑞能源管理有限公司";
         String titleEnd = "</title>";
-        injectSideMenu(titleStart, titleEnd, buf, getTitleString(file.getName(), menus));
+        String pageTitleString = getPageTitleString(file.getName(), menus);
+        System.out.println("  +---- Page Title - " + pageTitleString);
+        injectText(titleStart, titleEnd, buf, pageTitleString);
 
         FileUtil.writeFile(file, buf.toString());
     }
 
-    private void injectSideMenu(String startMark, String endMark, StringBuffer buf, String injectString) throws IOException {
+    private void injectText(String startMark, String endMark, StringBuffer buf, String injectString) throws IOException {
         int startPoint = buf.indexOf(startMark);
         if(startPoint < 0)
             return;
@@ -47,7 +49,7 @@ public class InjectRefiner {
         buf.replace(startPoint + startMark.length(), endPoint, injectString);
     }
 
-	private String getTitleString(String fileName, Menu[] menus){
+	private String getPageTitleString(String fileName, Menu[] menus){
 	    String subTitle = "";
         outer: for(Menu sideMenu : menus){
             String link = sideMenu.getLink();
