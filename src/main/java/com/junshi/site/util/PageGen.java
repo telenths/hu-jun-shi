@@ -45,7 +45,7 @@ public class PageGen {
                             + "      <tr id='menu_nav'>                                                                                   ".trim() + lineBreak
                             + "        <td class='menu_nav_item'>                                                                         ".trim() + lineBreak
                             + "        <a href='/index.html'><span class='menu_nav_item_text'>首页</span></a>                             ".trim() + lineBreak
-                            + "        <a href='/html/solutions/solution_00.html'><span class='menu_nav_item_text'>解决方案</span></a>     ".trim() + lineBreak
+                            + "        <a href='/html/solutions/2011/solution_00.html'><span class='menu_nav_item_text'>解决方案</span></a>     ".trim() + lineBreak
                             + "        <a href='/html/downloads/download_00.html'><span class='menu_nav_item_text'>资料下载</span></a>     ".trim() + lineBreak
                             + "        <a href='/html/about.html'><span class='menu_nav_item_text'>关于我们</span></a>                     ".trim() + lineBreak
                             + "        </td>                                                                                               ".trim() + lineBreak
@@ -81,7 +81,7 @@ public class PageGen {
                           + "<!--Page_Footer_End-->";
 
     private final String pageSideMenuReplacement = "<!--Page_Side_Menu_Start-->" + lineBreak
-                           + " <a style='width:100%' href='/html/contact.html'><div class='menu_link'>联系方式</div></a>       ".trim() + lineBreak
+                           + " <a style='width:100%' href='/html/about.html'><div class='menu_link'>联系方式</div></a>       ".trim() + lineBreak
                            + " <table border='0' cellspacing='0' cellpadding='0' class='salse_section'>    ".trim() + lineBreak
                            + "   <tr><td>联系人:</td><td>蔡&nbsp;亮</td></tr>                               ".trim() + lineBreak
                            + "   <tr><td>电话:</td><td>13764193800</td></tr>                               ".trim() + lineBreak
