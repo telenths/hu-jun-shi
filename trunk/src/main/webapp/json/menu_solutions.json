@@ -7,37 +7,37 @@
              { 
                "item":"智能变配电监控系统", 
                "clazz":"menu_item",
-               "link":"/html/solutions/solution_01.html"
+               "link":"/html/solutions/2011/solution_01.html"
              },
              { 
                "item":"智能电能监控管理系统", 
                "clazz":"menu_item",
-               "link":"/html/solutions/solution_02.html"
+               "link":"/html/solutions/2011/solution_02.html"
              },
              { 
                "item":"建筑能耗分析管理系统", 
                "clazz":"menu_item",
-               "link":"/html/solutions/solution_03.html"
+               "link":"/html/solutions/2011/solution_03.html"
              },
              { 
                "item":"剩余电流式电气火灾监控系统", 
                "clazz":"menu_item",
-               "link":"/html/solutions/solution_04.html"
+               "link":"/html/solutions/2011/solution_04.html"
              },
              { 
                "item":"光伏电站电力监控系统", 
                "clazz":"menu_item",
-               "link":"/html/solutions/solution_05.html"
+               "link":"/html/solutions/2011/solution_05.html"
              },
              { 
                "item":"ZigBee 无线网络电能管理系统", 
                "clazz":"menu_item",
-               "link":"/html/solutions/solution_06.html"
+               "link":"/html/solutions/2011/solution_06.html"
              },
              { 
                "item":"通讯机房(数据信息中心)电源管理系统", 
                "clazz":"menu_item",
-               "link":"/html/solutions/solution_07.html"
+               "link":"/html/solutions/2011/solution_07.html"
              }
            ]
   }

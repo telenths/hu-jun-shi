@@ -95,7 +95,7 @@ public class PageGen {
 			  "id=\"menu_solution\">"
     		, "<!--Page_Side_Menu_Start-->"
     		, "./src/main/webapp/json/menu_solutions.json"
-    		, "html"+fileSeparator+"solutions"+fileSeparator+"solution_"
+    		, "html"+fileSeparator+"solutions"+fileSeparator+"2011"+fileSeparator+"solution_"
     		);
 
     private final InjectRefiner downloadMenuRefiner = new InjectRefiner(
