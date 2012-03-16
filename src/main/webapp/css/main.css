@@ -136,6 +136,7 @@ p {
 }
 
 #table_left_menu {
+    width: 240px;
 	border-right: 1px solid #000;
 }
 

@@ -113,7 +113,7 @@ public class InjectRefiner {
     private String getMenuString(File file, Menu[] menus) {
         String fileName =  file.getParentFile().getName() + "/" + file.getName();
         StringBuffer buf = new StringBuffer("\n");
-		buf.append("<table border'0' cellspacing='0' cellpadding='0' id='table_left_menu'>\n");
+		buf.append("<table border='0' cellspacing='0' cellpadding='0' id='table_left_menu'>\n");
 		buf.append("<tr><td>\n");
         for(Menu sideMenu : menus){
         	String link = sideMenu.getLink();
