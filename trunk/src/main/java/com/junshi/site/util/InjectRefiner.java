@@ -12,6 +12,19 @@ public class InjectRefiner {
 
 	private final String menuStart, menuEnd, jsonFile, pathCheck;
 
+	private final String lineBreak = System.getProperty("line.separator");
+
+	private final String pageSideMenuReplacement = lineBreak
+            + " <a style='width:100%' href='/html/about.html'><div class='menu_link'>联系方式</div></a>       ".trim() + lineBreak
+            + " <table border='0' cellspacing='0' cellpadding='0' class='salse_section'>    ".trim() + lineBreak
+            + "   <tr><td>联系人:</td><td>蔡&nbsp;亮</td></tr>                               ".trim() + lineBreak
+            + "   <tr><td>电话:</td><td>13764193800</td></tr>                               ".trim() + lineBreak
+            + "   <tr><td>QQ:</td><td>1272489503</td></tr>                                  ".trim() + lineBreak
+            + "   <tr><td>Email:</td><td>bkcailiang@163.com</td></tr>                       ".trim() + lineBreak
+            + " </table>                                                                    ".trim() + lineBreak
+            + " <div style='height:1em; line-height:30px;'> </div>                          ".trim() + lineBreak
+            ;
+	
     public InjectRefiner(String menuStart, String menuEnd, String jsonFile, String pathCheck) {
 		super();
 		this.menuStart = menuStart;
@@ -32,16 +45,21 @@ public class InjectRefiner {
 
 		injectText(menuStart, menuEnd, buf, getMenuString(file, menus));
 
-		String titleStart = "<title>上海安科瑞能源管理有限公司";
-        String titleEnd = "</title>";
-        String pageTitleString = getPageTitleString(file, menus);
+		String pageTitleString = getPageTitleString(file, menus);
         System.out.println("  +---- Page Title - " + pageTitleString);
-        injectText(titleStart, titleEnd, buf, pageTitleString);
+        injectText("<title>上海安科瑞能源管理有限公司", "</title>", buf, pageTitleString);
 
+        String contentTitleString = getContentTitleString(file, menus);
+        System.out.println("  +---- Content Title - " + contentTitleString);
+		injectText("<p class='content_title'>", "</p>", buf, contentTitleString);
+        
         FileUtil.writeFile(file, buf.toString());
     }
 
     private void injectText(String startMark, String endMark, StringBuffer buf, String injectString) throws IOException {
+		if (injectString == null || injectString.trim().length() <= 0)
+			return;
+
         int startPoint = buf.indexOf(startMark);
         if(startPoint < 0)
             return;
@@ -49,6 +67,27 @@ public class InjectRefiner {
         buf.replace(startPoint + startMark.length(), endPoint, injectString);
     }
 
+    private String getContentTitleString(File file, Menu[] menus){
+        String fileName =  file.getParentFile().getName() + "/" + file.getName();
+        outer: for(Menu sideMenu : menus){
+            String link = sideMenu.getLink();
+            if(link.indexOf(fileName) >= 0){
+                break outer;
+            }
+            for(MenuItem menuItem : sideMenu.getData() ){
+                String itemLink = menuItem.getLink();
+				String itemName = menuItem.getItem();
+				String fullName = menuItem.getFull();
+                if(itemLink.indexOf(fileName) >= 0){
+					return fullName == null ? itemName : fullName;
+                }
+            }
+        }
+	    
+		return null;
+    	
+    }
+    
 	private String getPageTitleString(File file, Menu[] menus){
         String fileName =  file.getParentFile().getName() + "/" + file.getName();
 	    String subTitle = "";
@@ -74,6 +113,8 @@ public class InjectRefiner {
     private String getMenuString(File file, Menu[] menus) {
         String fileName =  file.getParentFile().getName() + "/" + file.getName();
         StringBuffer buf = new StringBuffer("\n");
+		buf.append("<table border'0' cellspacing='0' cellpadding='0' id='table_left_menu'>\n");
+		buf.append("<tr><td>\n");
         for(Menu sideMenu : menus){
         	String link = sideMenu.getLink();
         	String clazz = sideMenu.getClazz();
@@ -96,6 +137,9 @@ public class InjectRefiner {
       		  buf.append(itemHtml);
         	}
         }
+		buf.append(pageSideMenuReplacement);
+		buf.append("</td></tr></table>\n");
+		// buf.append("<!--Page_Side_Menu_End-->");
         return buf.toString();
     }
 
