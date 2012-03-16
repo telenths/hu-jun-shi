@@ -45,7 +45,7 @@ public class PageGen {
                             + "      <tr id='menu_nav'>                                                                                   ".trim() + lineBreak
                             + "        <td class='menu_nav_item'>                                                                         ".trim() + lineBreak
                             + "        <a href='/index.html'><span class='menu_nav_item_text'>首页</span></a>                             ".trim() + lineBreak
-                            + "        <a href='/html/solutions/2011/solution_00.html'><span class='menu_nav_item_text'>解决方案</span></a>     ".trim() + lineBreak
+                            + "        <a href='/html/solutions/solution.html'><span class='menu_nav_item_text'>解决方案</span></a>     ".trim() + lineBreak
                             + "        <a href='/html/downloads/download_00.html'><span class='menu_nav_item_text'>资料下载</span></a>     ".trim() + lineBreak
                             + "        <a href='/html/about.html'><span class='menu_nav_item_text'>关于我们</span></a>                     ".trim() + lineBreak
                             + "        </td>                                                                                               ".trim() + lineBreak
@@ -80,27 +80,17 @@ public class PageGen {
                           + "   </table>                                                                                                                                                                          ".trim() + lineBreak
                           + "<!--Page_Footer_End-->";
 
-    private final String pageSideMenuReplacement = "<!--Page_Side_Menu_Start-->" + lineBreak
-                           + " <a style='width:100%' href='/html/about.html'><div class='menu_link'>联系方式</div></a>       ".trim() + lineBreak
-                           + " <table border='0' cellspacing='0' cellpadding='0' class='salse_section'>    ".trim() + lineBreak
-                           + "   <tr><td>联系人:</td><td>蔡&nbsp;亮</td></tr>                               ".trim() + lineBreak
-                           + "   <tr><td>电话:</td><td>13764193800</td></tr>                               ".trim() + lineBreak
-                           + "   <tr><td>QQ:</td><td>1272489503</td></tr>                                  ".trim() + lineBreak
-                           + "   <tr><td>Email:</td><td>bkcailiang@163.com</td></tr>                       ".trim() + lineBreak
-                           + " </table>                                                                    ".trim() + lineBreak
-                           + " <div style='height:1em; line-height:30px; border-right:1px solid #000;'> </div>                                          ".trim() + lineBreak
-                           + "<!--Page_Side_Menu_End-->";
 
     private final InjectRefiner solutionMenuRefiner = new InjectRefiner(
-			  "id=\"menu_solution\">"
-    		, "<!--Page_Side_Menu_Start-->"
+			  "<!--Page_Side_Menu_Start-->"
+            , "<!--Page_Side_Menu_End-->"
     		, "./src/main/webapp/json/menu_solutions.json"
     		, "html"+fileSeparator+"solutions"+fileSeparator //+"2011"+fileSeparator+"solution_"
     		);
 
     private final InjectRefiner downloadMenuRefiner = new InjectRefiner(
-			  "id=\"menu_download\">"
-    		, "<!--Page_Side_Menu_Start-->"
+			  "<!--Page_Side_Menu_Start-->"
+            , "<!--Page_Side_Menu_End-->"
     		, "./src/main/webapp/json/menu_downloads.json"
     		, "html"+fileSeparator+"downloads"+fileSeparator+"download_"
     		);
@@ -149,7 +139,7 @@ public class PageGen {
         str = replace(str, "Head_Import", headReplacement);
         str = replace(str, "Page_Header", pageHeaderReplacement);
         str = replace(str, "Page_Footer", pageFooterReplacement);
-        str = replace(str, "Page_Side_Menu", pageSideMenuReplacement);
+		// str = replace(str, "Page_Side_Menu", pageSideMenuReplacement);
         FileUtil.writeFile(file, str);
 
         solutionMenuRefiner.refine(file);
