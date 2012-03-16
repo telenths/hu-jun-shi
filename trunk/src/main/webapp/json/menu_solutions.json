@@ -1,5 +1,62 @@
 [
-  { "menu":"解决方案",
+  { "menu":"解决方案(2012)",
+    "clazz":"menu_link",
+    "link":"/html/solutions/2012/solution_00.html",
+    "data":
+           [ 
+             { 
+               "item":"智能变配电监控系统", 
+               "clazz":"menu_item",
+               "link":"/html/solutions/2012/solution_01.html"
+             },
+             { 
+               "item":"基于Profibus-DP（西门子）协议的智能电力监控及马达保护控制选型方案", 
+               "clazz":"menu_item",
+               "link":"/html/solutions/2012/solution_02.html"
+             },
+             { 
+               "item":"工业电能平衡实施选型方案", 
+               "clazz":"menu_item",
+               "link":"/html/solutions/2012/solution_03.html"
+             },
+             { 
+               "item":"智能电能监控管理系统", 
+               "clazz":"menu_item",
+               "link":"/html/solutions/2012/solution_04.html"
+             },
+             { 
+               "item":"建筑能耗分析管理系统", 
+               "clazz":"menu_item",
+               "link":"/html/solutions/2012/solution_05.html"
+             },
+             { 
+               "item":"光伏电站电力监控系统", 
+               "clazz":"menu_item",
+               "link":"/html/solutions/2012/solution_06.html"
+             },
+             { 
+               "item":"剩余电流式电气火灾监控系统", 
+               "clazz":"menu_item",
+               "link":"/html/solutions/2012/solution_07.html"
+             },
+             { 
+               "item":"医疗IT配电系统洁净电源解决方案", 
+               "clazz":"menu_item",
+               "link":"/html/solutions/2012/solution_08.html"
+             },
+             { 
+               "item":"ZigBee 无线网络电能管理系统", 
+               "clazz":"menu_item",
+               "link":"/html/solutions/2012/solution_09.html"
+             },
+             { 
+               "item":"通讯机房(数据信息中心)电源管理系统", 
+               "clazz":"menu_item",
+               "link":"/html/solutions/2012/solution_10.html"
+             }
+           ]
+  },
+  { "menu":"解决方案(2011)",
     "clazz":"menu_link",
     "link":"/html/solutions/2011/solution_00.html",
     "data":
@@ -41,4 +98,5 @@
              }
            ]
   }
+ 
 ] 
