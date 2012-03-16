@@ -30,11 +30,11 @@ public class InjectRefiner {
         StringBuffer buf = new StringBuffer(str);
         Menu[] menus = getSideMenu();
 
-		injectText(menuStart, menuEnd, buf, getMenuString(file.getName(), menus));
+		injectText(menuStart, menuEnd, buf, getMenuString(file, menus));
 
 		String titleStart = "<title>上海安科瑞能源管理有限公司";
         String titleEnd = "</title>";
-        String pageTitleString = getPageTitleString(file.getName(), menus);
+        String pageTitleString = getPageTitleString(file, menus);
         System.out.println("  +---- Page Title - " + pageTitleString);
         injectText(titleStart, titleEnd, buf, pageTitleString);
 
@@ -49,7 +49,8 @@ public class InjectRefiner {
         buf.replace(startPoint + startMark.length(), endPoint, injectString);
     }
 
-	private String getPageTitleString(String fileName, Menu[] menus){
+	private String getPageTitleString(File file, Menu[] menus){
+        String fileName =  file.getParentFile().getName() + "/" + file.getName();
 	    String subTitle = "";
         outer: for(Menu sideMenu : menus){
             String link = sideMenu.getLink();
@@ -70,7 +71,8 @@ public class InjectRefiner {
 	    return subTitle;
 	}
 
-    private String getMenuString(String fileName, Menu[] menus) {
+    private String getMenuString(File file, Menu[] menus) {
+        String fileName =  file.getParentFile().getName() + "/" + file.getName();
         StringBuffer buf = new StringBuffer("\n");
         for(Menu sideMenu : menus){
         	String link = sideMenu.getLink();
