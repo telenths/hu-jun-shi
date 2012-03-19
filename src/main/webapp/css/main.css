@@ -122,7 +122,7 @@ p {
     display: inline-block;
 }
 .menu_nav_item_text:hover{
-    border-bottom: 27px solid #C76;
+    border-bottom: 27px solid #821;
 }
 .menu_nav_item_text_current {
     background: #88C;
@@ -151,13 +151,12 @@ p {
 
 .menu_link, .menu_nolink {
     height: 0px;
-    width: 170px;
+    width: 198px;
     margin: 0;
     text-align: left;
 	font-size: 15px;
     font-weight: bold;
-/*     padding-top:0.5em; */
-    padding-left: 20px;
+/*     padding-left: 50px; */
 /*     background: url(/images/box_title.gif) no-repeat 0px 2px; */
     color: #FFF;
     line-height: 27px;
@@ -165,6 +164,10 @@ p {
     border-right: 27px solid transparent;
     display: inline-block;
     
+}
+
+.menu_link:hover, .menu_nolink:hover {
+    border-bottom: 27px solid #D00;
 }
 
 .menu_item, .menu_item_current {
