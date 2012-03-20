@@ -1,4 +1,4 @@
-package com.junshi.site.util;
+package com.junshi.site.gen;
 
 import java.io.File;
 import java.io.IOException;
