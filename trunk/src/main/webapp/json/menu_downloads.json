@@ -1,7 +1,7 @@
 [
   { "menu":"资料下载",
-    "clazz":"menu_link",
-    "link":"/html/downloads/download_00.html",
+    "clazz":"menu_nolink",
+    "link":"",
     "data":
            [ 
              { 

@@ -13,6 +13,11 @@ function initFooterLinks() {
 $(document).ready(function() {
 	initFooterLinks();
 
+	$('.js-enabled').memu({ 
+//	     rootWidth: 75,          // the width of the (root) items
+	    height: 26          // the height of the items
+	});
+	
 	$('#table_contact tr>td:even').addClass('center_align_left');
 	$('#table_contact tr>td:odd').addClass('center_align_right');
 
@@ -30,6 +35,5 @@ $(document).ready(function() {
 		_gaq.push(['_setCustomVar', '1', 'Preview', docTitle, '3']);
 		_gaq.push(['_trackEvent', 'Downloads', 'Preview', docTitle]);
 	});
-	
 	
 });
