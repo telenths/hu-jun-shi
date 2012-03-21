@@ -24,7 +24,7 @@ public class InjectRefiner {
             + " </table>                                                                    ".trim() + lineBreak
             + " <div style='height:1em; line-height:30px;'> </div>                          ".trim() + lineBreak
             ;
-	
+
     public InjectRefiner(String menuStart, String menuEnd, String jsonFile, String pathCheck) {
 		super();
 		this.menuStart = menuStart;
@@ -52,7 +52,7 @@ public class InjectRefiner {
         String contentTitleString = getContentTitleString(file, menus);
         System.out.println("  +---- Content Title - " + contentTitleString);
 		injectText("<p class='content_title'>", "</p>", buf, contentTitleString);
-        
+
         FileUtil.writeFile(file, buf.toString());
     }
 
@@ -83,11 +83,11 @@ public class InjectRefiner {
                 }
             }
         }
-	    
+
 		return null;
-    	
+
     }
-    
+
 	private String getPageTitleString(File file, Menu[] menus){
         String fileName =  file.getParentFile().getName() + "/" + file.getName();
 	    String subTitle = "";
@@ -120,8 +120,12 @@ public class InjectRefiner {
         	String clazz = sideMenu.getClazz();
         	String menu = sideMenu.getMenu();
 
-        	String html = "<a style='width:100%' href='" + link + "'><div class='"+clazz+"'>" + menu + "</div></a> \n";
+        	String html = "<div class='"+clazz+"'>" + menu + "</div> \n";
+        	if(link != null && link.trim().length() > 0){
+        	  html = "<a style='width:100%' href='" + link + "'><div class='"+clazz+"'>" + menu + "</div></a> \n";
+        	}
         	buf.append(html);
+
 
         	for(MenuItem menuItem : sideMenu.getData() ){
         		String itemLink = menuItem.getLink();

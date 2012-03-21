@@ -19,6 +19,7 @@ public class PageGen {
                            + " <link type='text/css' rel='stylesheet' href='/css/main.css?t=#DATETIME#' />                ".trim() + lineBreak
                            + " <script type='text/javascript' src='/js/googletrack.js?t=#DATETIME#'></script>             ".trim() + lineBreak
                            + " <script type='text/javascript' src='/js/jquery-1.6.4.min.js?t=#DATETIME#'></script>        ".trim() + lineBreak
+                           + " <script type='text/javascript' src='/js/jquery.memu-0.1.min.js?t=#DATETIME#'></script>     ".trim() + lineBreak
                            + " <script type='text/javascript' src='/js/page_init.js?t=#DATETIME#'></script>               ".trim() + lineBreak
                            + "<!--Head_Import_End-->";
 
@@ -44,14 +45,29 @@ public class PageGen {
                             + "  <table border='0' cellspacing='0' cellpadding='0' id='menu'>                                             ".trim() + lineBreak
                             + "      <tr id='menu_nav'>                                                                                   ".trim() + lineBreak
                             + "        <td class='menu_nav_item'>                                                                         ".trim() + lineBreak
-                            + "        <a href='/index.html'><span class='menu_nav_item_text'>首页</span></a>                             ".trim() + lineBreak
-                            + "        <a href='/html/solutions/solution.html'><span class='menu_nav_item_text'>解决方案</span></a>     ".trim() + lineBreak
-                            + "        <a href='/html/downloads/download_00.html'><span class='menu_nav_item_text'>资料下载</span></a>     ".trim() + lineBreak
-                            + "        <a href='/html/about.html'><span class='menu_nav_item_text'>关于我们</span></a>                     ".trim() + lineBreak
+                            + "   <ul class='memu js-enabled'>                                                                                      ".trim() + lineBreak
+                            + "     <li class='memu-root'><a href='/index.html'><span class='menu_nav_item_text'>首页</span></a></li>                   ".trim() + lineBreak
+                            + "     <li class='memu-root'><span class='menu_nav_item_text'>解决方案</span>                                                ".trim() + lineBreak
+                            + "       <ul>                                                                                                            ".trim() + lineBreak
+                            + "         <li><a href='/html/solutions/2011/solution_00.html'><span class='menu_nav_sub_item_text'>2011</span></a></li>         ".trim() + lineBreak
+                            + "         <li><a href='/html/solutions/2012/solution_00.html'><span class='menu_nav_sub_item_text'>2012</span></a></li>         ".trim() + lineBreak
+                            + "       </ul>                                                                                                           ".trim() + lineBreak
+                            + "     </li>                                                                                                             ".trim() + lineBreak
+                            + "     <li class='memu-root'><span class='menu_nav_item_text'>资料下载</span>                                                ".trim() + lineBreak
+                            + "       <ul>                                                                                                            ".trim() + lineBreak
+                            + "         <li><a href='/html/downloads/download_01.html'><span class='menu_nav_sub_item_text'>系统案例</span></a></li>      ".trim() + lineBreak
+                            + "         <li><a href='/html/downloads/download_02.html'><span class='menu_nav_sub_item_text'>产品资料</span></a></li>      ".trim() + lineBreak
+                            + "         <li><a href='/html/downloads/download_03.html'><span class='menu_nav_sub_item_text'>相关论文</span></a></li>      ".trim() + lineBreak
+                            + "       </ul>                                                                                                           ".trim() + lineBreak
+                            + "     </li>                                                                                                             ".trim() + lineBreak
+                            + "     <li class='memu-root'><a href='/html/about.html'><span class='menu_nav_item_text'>关于我们</span></a></li>            ".trim() + lineBreak
+                            + "   </ul>                                                                                                               ".trim() + lineBreak
                             + "        </td>                                                                                               ".trim() + lineBreak
                             + "      </tr>                                                                                                 ".trim() + lineBreak
                             + "  </table>                                                                                                  ".trim() + lineBreak
                             + "<!--Page_Header_End-->";
+
+
 
     private final String pageFooterReplacement = "<!--Page_Footer_Start-->"            + lineBreak
     		              + " <table border='0' cellspacing='0' cellpadding='0' id='page_footer'>                           ".trim() + lineBreak
