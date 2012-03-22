@@ -10,11 +10,11 @@ import com.junshi.util.FileUtil;
 
 public class InjectRefiner {
 
-	private final String menuStart, menuEnd, jsonFile, pathCheck;
+	protected final String menuStart, menuEnd, jsonFile, pathCheck;
 
-	private final String lineBreak = System.getProperty("line.separator");
+	protected final String lineBreak = System.getProperty("line.separator");
 
-	private final String pageSideMenuReplacement = lineBreak
+	protected final String pageSideMenuReplacement = lineBreak
             + " <a style='width:100%' href='/html/about.html'><div class='menu_link'>联系方式</div></a>       ".trim() + lineBreak
             + " <table border='0' cellspacing='0' cellpadding='0' class='salse_section'>    ".trim() + lineBreak
             + "   <tr><td>联系人:</td><td>蔡&nbsp;亮</td></tr>                               ".trim() + lineBreak
@@ -47,7 +47,7 @@ public class InjectRefiner {
 
 		String pageTitleString = getPageTitleString(file, menus);
         System.out.println("  +---- Page Title - " + pageTitleString);
-        injectText("<title>上海安科瑞能源管理有限公司", "</title>", buf, pageTitleString);
+        injectText("<title>", "</title>", buf, pageTitleString);
 
         String contentTitleString = getContentTitleString(file, menus);
         System.out.println("  +---- Content Title - " + contentTitleString);
@@ -56,7 +56,7 @@ public class InjectRefiner {
         FileUtil.writeFile(file, buf.toString());
     }
 
-    private void injectText(String startMark, String endMark, StringBuffer buf, String injectString) throws IOException {
+    protected void injectText(String startMark, String endMark, StringBuffer buf, String injectString) throws IOException {
 		if (injectString == null || injectString.trim().length() <= 0)
 			return;
 
@@ -67,7 +67,7 @@ public class InjectRefiner {
         buf.replace(startPoint + startMark.length(), endPoint, injectString);
     }
 
-    private String getContentTitleString(File file, Menu[] menus){
+    protected String getContentTitleString(File file, Menu[] menus){
         String fileName =  file.getParentFile().getName() + "/" + file.getName();
         outer: for(Menu sideMenu : menus){
             String link = sideMenu.getLink();
@@ -88,29 +88,29 @@ public class InjectRefiner {
 
     }
 
-	private String getPageTitleString(File file, Menu[] menus){
+    protected String getPageTitleString(File file, Menu[] menus){
         String fileName =  file.getParentFile().getName() + "/" + file.getName();
 	    String subTitle = "";
         outer: for(Menu sideMenu : menus){
             String link = sideMenu.getLink();
             String menu = sideMenu.getMenu();
             if(link.indexOf(fileName) >= 0){
-                subTitle = " - " + menu;
+                subTitle = menu;
                 break outer;
             }
             for(MenuItem menuItem : sideMenu.getData() ){
                 String itemLink = menuItem.getLink();
                 String itemName = menuItem.getItem();
                 if(itemLink.indexOf(fileName) >= 0){
-                    subTitle = " - " + menu + " - " + itemName;
+                    subTitle = menu + " - " + itemName;
                     break outer;
                 }
             }
         }
-	    return subTitle;
+	    return subTitle + " - 上海安科瑞能源管理有限公司";
 	}
 
-    private String getMenuString(File file, Menu[] menus) {
+    protected String getMenuString(File file, Menu[] menus) {
         String fileName =  file.getParentFile().getName() + "/" + file.getName();
         StringBuffer buf = new StringBuffer("\n");
 		buf.append("<table border='0' cellspacing='0' cellpadding='0' id='table_left_menu'>\n");
@@ -147,11 +147,11 @@ public class InjectRefiner {
         return buf.toString();
     }
 
-    private boolean isTarget(File file){
+    protected boolean isTarget(File file){
 		return file.getAbsolutePath().indexOf(pathCheck) > 0;
     }
 
-    private Menu[] getSideMenu() throws IOException{
+    protected Menu[] getSideMenu() throws IOException{
 		String jsonFileText = FileUtil.readFile(new File(jsonFile));
         Gson gson = new Gson();
         Menu[] sideMenu = gson.fromJson(jsonFileText, Menu[].class);
