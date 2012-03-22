@@ -97,14 +97,14 @@ public class PageGen {
                           + "<!--Page_Footer_End-->";
 
 
-    private final InjectRefiner solutionMenuRefiner = new InjectRefiner(
+    private final InjectRefiner solutionMenuRefiner = new InjectRefinerSolution(
 			  "<!--Page_Side_Menu_Start-->"
             , "<!--Page_Side_Menu_End-->"
     		, "./src/main/webapp/json/menu_solutions.json"
     		, "html"+fileSeparator+"solutions"+fileSeparator //+"2011"+fileSeparator+"solution_"
     		);
 
-    private final InjectRefiner downloadMenuRefiner = new InjectRefiner(
+    private final InjectRefiner downloadMenuRefiner = new InjectRefinerDownload(
 			  "<!--Page_Side_Menu_Start-->"
             , "<!--Page_Side_Menu_End-->"
     		, "./src/main/webapp/json/menu_downloads.json"
