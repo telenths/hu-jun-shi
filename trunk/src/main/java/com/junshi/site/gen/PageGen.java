@@ -24,7 +24,7 @@ public class PageGen {
                            + "<!--Head_Import_End-->";
 
     private final String pageHeaderReplacement = "<!--Page_Header_Start-->" + lineBreak
-                            + " <table border='0' cellspacing='0' cellpadding='0'>                                                        ".trim() + lineBreak
+                            + " <table border='0' cellspacing='0' cellpadding='0'>                                              ".trim() + lineBreak
                             + "   <tr>                                                                                                    ".trim() + lineBreak
                             + "     <td>                                                                                                  ".trim() + lineBreak
                             + "       <object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000'                                        ".trim() + lineBreak
