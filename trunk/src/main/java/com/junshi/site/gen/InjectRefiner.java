@@ -25,6 +25,17 @@ public class InjectRefiner {
             + " <div style='height:1em; line-height:30px;'> </div>                          ".trim() + lineBreak
             ;
 
+
+	protected final String taobaoAd = lineBreak
+	        + "<script type=\"text/javascript\">                                     ".trim() + lineBreak
+	        + "alimama_pid=\"mm_10562594_3477930_11337765\";                         ".trim() + lineBreak
+	        + "alimama_width=250;                                                    ".trim() + lineBreak
+	        + "alimama_height=250;                                                   ".trim() + lineBreak
+	        + "</script>                                                             ".trim() + lineBreak
+	        + "<script src=\"http://a.alimama.cn/inf.js\" type=\"text/javascript\">  ".trim() + lineBreak
+	        + "</script>                                                             ".trim();
+
+
     public InjectRefiner(String menuStart, String menuEnd, String jsonFile, String pathCheck) {
 		super();
 		this.menuStart = menuStart;
@@ -143,6 +154,7 @@ public class InjectRefiner {
         }
 		buf.append(pageSideMenuReplacement);
 		buf.append("</td></tr></table>\n");
+        buf.append(taobaoAd);
 		// buf.append("<!--Page_Side_Menu_End-->");
         return buf.toString();
     }

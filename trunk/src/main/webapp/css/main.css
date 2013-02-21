@@ -203,11 +203,11 @@ p {
 
 /* ------------- Left Menu --------------- */
 .left_menu {
-    width: 240px;
+    width: 250px;
 }
 
 #table_left_menu {
-    width: 240px;
+    width: 250px;
 	border-right: 1px solid #000;
 }
 
