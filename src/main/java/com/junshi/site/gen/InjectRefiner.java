@@ -154,7 +154,9 @@ public class InjectRefiner {
         }
 		buf.append(pageSideMenuReplacement);
 		buf.append("</td></tr></table>\n");
+        buf.append("<br><br><br>\n");
         buf.append(taobaoAd);
+        buf.append("<br><br>\n");
 		// buf.append("<!--Page_Side_Menu_End-->");
         return buf.toString();
     }
