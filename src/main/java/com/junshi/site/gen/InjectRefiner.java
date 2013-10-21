@@ -118,7 +118,7 @@ public class InjectRefiner {
                 }
             }
         }
-	    return subTitle + " - 上海安科瑞能源管理有限公司";
+	    return subTitle + " - 蔡亮";//" - 上海安科瑞能源管理有限公司";
 	}
 
     protected String getMenuString(File file, Menu[] menus) {
