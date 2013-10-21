@@ -15,7 +15,8 @@ public class PageGen {
     private final String headReplacement = "<!--Head_Import_Start-->" + lineBreak
                            + " <meta name='keywords' content='电表,智能电网,解决方案,安科瑞,传感器,智能电力监控仪表,智能马达控制器,电量传感器,导轨式安装电表,火灾监控装置,数显继电器,电力监控系统,能耗监测系统' />".trim() + lineBreak
                            + " <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>                         ".trim() + lineBreak
-                           + " <title>上海安科瑞能源管理有限公司</title>                                                                ".trim() + lineBreak
+//                           + " <title>上海安科瑞能源管理有限公司</title>                                                                ".trim() + lineBreak
+                           + " <title>蔡亮</title>                                                                ".trim() + lineBreak
                            + " <link type='text/css' rel='stylesheet' href='/css/main.css?t=#DATETIME#' />                ".trim() + lineBreak
                            + " <script type='text/javascript' src='/js/googletrack.js?t=#DATETIME#'></script>             ".trim() + lineBreak
                            + " <script type='text/javascript' src='/js/jquery-1.6.4.min.js?t=#DATETIME#'></script>        ".trim() + lineBreak
